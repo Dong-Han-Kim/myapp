@@ -1,0 +1,51 @@
+.container {
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+}
+
+.contents {
+  background-color: rebeccapurple;
+  display: flex;
+  justify-content: space-between;
+  width: 100dvw;
+  align-items: center;
+}
+
+.items {
+  background-color: green;
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.items li {
+  margin-right: 15px;
+  padding: 15px;
+}
+
+.items li:last-child {
+  margin-right: 0;
+}
+
+.items li:hover {
+  background-color: #004225;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .items {
+    display: none;
+  }
+
+  .menuBtn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+  }
+}
