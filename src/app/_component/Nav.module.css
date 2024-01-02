@@ -1,27 +1,22 @@
 .container {
   background-color: aqua;
+  position: fixed;
   display: flex;
-  justify-content: center;
-}
-
-.contents {
-  background-color: rebeccapurple;
-  display: flex;
-  justify-content: space-between;
   width: 100dvw;
+  justify-content: space-between;
   align-items: center;
 }
 
 .items {
-  background-color: green;
   display: flex;
   list-style: none;
-  justify-content: space-between;
+  margin-right: 1.5rem;
 }
 
 .items li {
   margin-right: 15px;
   padding: 15px;
+  cursor: pointer;
 }
 
 .items li:last-child {
@@ -32,20 +27,48 @@
   background-color: #004225;
 }
 
+.menuBtn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 32px;
+  background-color: transparent;
+  color: black;
+  border: none;
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
+  .menuBtn {
+    display: block;
+    top: 35px;
+    right: 24px;
+    background-color: transparent;
+    color: black;
+    border: none;
+  }
+
   .container {
+    display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #fed957;
+    height: 8rem;
+    position: absolute;
   }
 
   .items {
+    flex-direction: column;
+    position: absolute;
+    text-align: center;
+    background-color: #fed957;
+    margin-right: 0;
+    width: 100dvw;
+    top: 7.5rem;
     display: none;
   }
 
-  .menuBtn {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
+  .items li {
+    margin: 0;
   }
 }
