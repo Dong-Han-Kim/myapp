@@ -1,0 +1,8 @@
+.mainAlign {
+  display: flex;
+  flex-direction: column;
+}
+
+.navPosition {
+  margin-bottom: 20px;
+}

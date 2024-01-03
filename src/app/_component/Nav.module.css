@@ -1,5 +1,5 @@
 .container {
-  background-color: aqua;
+  /* background-color: aqua; */
   position: fixed;
   display: flex;
   width: 100dvw;
@@ -24,6 +24,10 @@
 }
 
 .items li:hover {
+  background-color: #004225;
+}
+
+.active {
   background-color: #004225;
 }
 
