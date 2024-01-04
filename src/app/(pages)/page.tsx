@@ -6,11 +6,6 @@ export default function Home() {
   return (
     <main className={styles.main}>
       Home page
-      <button>
-        <Link href='/about'>
-          들어가기
-        </Link>
-      </button>
     </main>
   )
 }

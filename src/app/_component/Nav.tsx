@@ -5,74 +5,96 @@ import styles from './Nav.module.css';
 import { MenuBar } from './../../../public/icons';
 import Link from 'next/link';
 import { useSelectedLayoutSegment } from 'next/navigation';
+import { useEffect, useRef, useState } from 'react';
 
+type menuRef = {
+
+}
 
 export default function Nav() {
   const segment = useSelectedLayoutSegment();
-  console.log(segment);
+  const toggleRef = useRef<HTMLUListElement>(null);
+  const [innerWidth, setInnerWidth] = useState(window.innerWidth);
+
+  useEffect(() => { 
+    const resizeListener = () => { 
+      setInnerWidth(window.innerWidth);
+    }
+    window.addEventListener('resize', resizeListener);
+    window.addEventListener('beforeunload', resizeListener);
+  }, []);
+
+  console.log(innerWidth);
   
+
+
+  const toggleMenu = () => {
+    if (toggleRef.current) {
+      toggleRef.current.classList.toggle(styles.toggleMenu)
+    }
+  }
   return (
     <nav className={styles.container}>
       <div className={styles.logo}>
         <Image src={'/logo.png'} width={100} height={100} alt='Logo' />
       </div>
-      <ul className={styles.items}>
+      <ul className={styles.items} ref={toggleRef}>
         {
           segment === null ? 
-          <li style={{backgroundColor: '#004225'}}>
-            <Link href='/'>
+          <Link href='/'>
+            <li style={{backgroundColor: '#004225'}}>
               Home
-            </Link>
-          </li> :
-          <li>
-            <Link href='/'>
+            </li> 
+          </Link> :
+          <Link href='/'>
+            <li>
               Home
-            </Link>
-          </li>
+            </li>
+          </Link>
         }
         {
           segment === 'about' ?
-          <li style={{backgroundColor: '#004225'}}>
-            <Link href='/about'>
+          <Link href='/about'>
+            <li style={{backgroundColor: '#004225'}}>
               About
-            </Link>
-          </li> :
-          <li>
-            <Link href='/about'>
+            </li>
+          </Link> :
+          <Link href='/about'>
+            <li>
               About
-            </Link>
-          </li>
+            </li>
+          </Link>
         }
         {
           segment === 'project' ?
-          <li style={{backgroundColor: '#004225'}}>
-            <Link href='/project'>
+          <Link href='/project'>
+            <li style={{backgroundColor: '#004225'}}>
               Project
-            </Link>
-          </li> :
-          <li>
-            <Link href='/project'>
+            </li>
+          </Link> :
+          <Link href='/project'>
+            <li>
               Project
-            </Link>
-          </li>
+            </li>
+          </Link>
         }
         {
           segment === 'contact' ?
-          <li style={{backgroundColor: '#004225'}}>
-            <Link href='contact'>
+          <Link href='contact'>
+            <li style={{backgroundColor: '#004225'}}>
               Contact
-            </Link>
-            </li> :
-          <li>
-            <Link href='contact'>
+            </li>
+          </Link> :
+          <Link href='contact'>
+            <li>
               Contact
-            </Link>
-          </li>
+            </li>
+          </Link>
         }
       </ul>
 
 
-        <button className={styles.menuBtn}>
+        <button className={styles.menuBtn} onClick={toggleMenu}>
           <MenuBar />
         </button>
     </nav>
