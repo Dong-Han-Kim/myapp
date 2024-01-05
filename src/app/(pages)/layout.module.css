@@ -1,8 +1,79 @@
 .mainAlign {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    height: 100dvh;
 }
 
-.navPosition {
-  margin-bottom: 20px;
+.leftSection {
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+.rightSection {
+    flex: 8;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    text-align: center;
+    justify-content: center;
+}
+
+.headerLayout {
+    text-align: center;
+    width: 800px;
+    margin: 20px auto;
+}
+
+.text {
+    margin-bottom: 15px;
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+.author {
+    position: relative;
+    float: right;
+    margin-right: 25px;
+    font-weight: 600;
+}
+
+.division {
+    width: inherit;
+    margin-top: 50px;
+}
+
+.division::after {
+    content: '';
+    display: block;
+    position: relative;
+    margin-top: 8px;
+    width: inherit;
+    height: 2px;
+    background-color: black;
+}
+
+.mainContent {
+    width: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+    height: 100dvh;
+}
+
+@media screen and (max-width: 1000px) {
+    .headerLayout {
+        display: none;
+    }
+
+    .leftSection {
+        display: block;
+        position: absolute;
+        width: 100dvw;
+    }
+
+    .rightSection {
+        margin: 0;
+    }
 }

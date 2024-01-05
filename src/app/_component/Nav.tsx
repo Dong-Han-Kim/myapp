@@ -13,8 +13,9 @@ type menuRef = {
 
 export default function Nav() {
   const segment = useSelectedLayoutSegment();
+
   const toggleRef = useRef<HTMLUListElement>(null);
-  const [innerWidth, setInnerWidth] = useState(window.innerWidth);
+  const [innerWidth, setInnerWidth] = useState(window?.innerWidth);
 
   useEffect(() => { 
     const resizeListener = () => { 

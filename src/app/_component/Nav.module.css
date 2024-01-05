@@ -1,23 +1,26 @@
 .container {
     position: fixed;
     display: flex;
-    width: 100dvw;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border-right: 1px solid black;
+    height: 100dvh;
 }
 
 .logo {
-    margin-left: 1.5rem;
+    margin: 0 0 25px 10px;
 }
 
 .items {
     display: flex;
+    flex-direction: column;
     list-style: none;
-    margin-right: 1.5rem;
+    margin-left: 10px;
 }
 
 .items a {
-    margin-right: 15px;
+    margin-bottom: 15px;
 }
 
 .items li {
@@ -60,8 +63,11 @@
 
     .container {
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        width: 100dvw;
+        border-right: none;
         background-color: #fed957;
         height: 8rem;
         position: absolute;
@@ -72,7 +78,7 @@
         position: absolute;
         text-align: center;
         background-color: #fed957;
-        margin-right: 0;
+        margin-left: 0;
         width: 100dvw;
         top: 7.5rem;
         display: none;
