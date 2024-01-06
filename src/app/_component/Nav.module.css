@@ -1,94 +1,96 @@
 .container {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    border-right: 1px solid black;
-    height: 100dvh;
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	text-align: center;
+	background-color: rgba(222, 222, 222, 0.2);
+	height: 100dvh;
+	padding: 25px;
 }
 
 .logo {
-    margin: 0 0 25px 10px;
+	margin: 0 0 25px 10px;
 }
 
 .items {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    margin-left: 10px;
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	margin-left: 10px;
 }
 
 .items a {
-    margin-bottom: 15px;
+	margin-bottom: 15px;
 }
 
 .items li {
-    padding: 15px;
-    cursor: pointer;
+	padding: 15px;
+	cursor: pointer;
 }
 
 .items li:last-child {
-    margin-right: 0;
+	margin-right: 0;
 }
 
 .items li:hover {
-    background-color: #004225;
+	background-color: #004225;
 }
 
 .active {
-    background-color: #004225;
+	background-color: #004225;
 }
 
 .menuBtn {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    right: 32px;
-    background-color: transparent;
-    color: black;
-    border: none;
-    display: none;
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	right: 32px;
+	background-color: transparent;
+	color: black;
+	border: none;
+	display: none;
 }
 
 @media screen and (max-width: 768px) {
-    .menuBtn {
-        display: block;
-        top: 35px;
-        right: 24px;
-        background-color: transparent;
-        color: black;
-        border: none;
-    }
+	.menuBtn {
+		display: block;
+		top: 35px;
+		right: 24px;
+		background-color: transparent;
+		color: black;
+		border: none;
+	}
 
-    .container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        width: 100dvw;
-        border-right: none;
-        background-color: #fed957;
-        height: 8rem;
-        position: absolute;
-    }
+	.container {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		width: 100dvw;
+		border-right: none;
+		background-color: #fed957;
+		height: 8rem;
+		position: absolute;
+	}
 
-    .items {
-        flex-direction: column;
-        position: absolute;
-        text-align: center;
-        background-color: #fed957;
-        margin-left: 0;
-        width: 100dvw;
-        top: 7.5rem;
-        display: none;
-    }
+	.items {
+		flex-direction: column;
+		position: absolute;
+		text-align: center;
+		background-color: #fed957;
+		width: 100dvw;
+		top: 7.5rem;
+		display: none;
+		margin-left: 0;
+		left: 0;
+	}
 
-    .toggleMenu {
-        display: flex;
-    }
+	.toggleMenu {
+		display: flex;
+	}
 
-    .items li {
-        margin: 0;
-    }
+	.items li {
+		margin: 0;
+	}
 }

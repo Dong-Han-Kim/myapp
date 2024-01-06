@@ -1,79 +1,83 @@
 .mainAlign {
-    display: flex;
-    justify-content: space-between;
-    height: 100dvh;
+	display: flex;
+	justify-content: space-between;
+	height: 100dvh;
 }
 
 .leftSection {
-    flex: 1;
-    margin-bottom: 20px;
+	flex: 1 1;
+	max-width: 10rem;
 }
 
 .rightSection {
-    flex: 8;
-    display: flex;
-    flex-direction: column;
-    margin-left: 20px;
-    text-align: center;
-    justify-content: center;
+	display: flex;
+	flex-direction: column;
+	flex: 4 2;
+	text-align: center;
+	justify-content: center;
 }
 
 .headerLayout {
-    text-align: center;
-    width: 800px;
-    margin: 20px auto;
+	text-align: center;
+	width: inherit;
+	margin: 20px auto;
+	padding: 15px;
 }
 
 .text {
-    margin-bottom: 15px;
-    font-weight: 900;
-    font-size: 1.5rem;
+	margin-bottom: 15px;
+	font-weight: 900;
+	font-size: 1.5rem;
 }
 
 .author {
-    position: relative;
-    float: right;
-    margin-right: 25px;
-    font-weight: 600;
+	position: relative;
+	float: right;
+	margin-right: 25px;
+	font-weight: 600;
 }
 
 .division {
-    width: inherit;
-    margin-top: 50px;
+	width: inherit;
+	margin-top: 50px;
 }
 
 .division::after {
-    content: '';
-    display: block;
-    position: relative;
-    margin-top: 8px;
-    width: inherit;
-    height: 2px;
-    background-color: black;
+	content: '';
+	display: block;
+	position: relative;
+	margin-top: 8px;
+	width: inherit;
+	height: 2px;
+	background-color: black;
 }
 
 .mainContent {
-    width: inherit;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    position: relative;
-    height: 100dvh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	position: relative;
+	height: 100dvh;
 }
 
-@media screen and (max-width: 1000px) {
-    .headerLayout {
-        display: none;
-    }
+@media screen and (max-width: 800px) {
+	.headerLayout {
+		display: none;
+	}
 
-    .leftSection {
-        display: block;
-        position: absolute;
-        width: 100dvw;
-    }
+	.leftSection {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		width: 100dvw;
+		border-right: none;
+		height: 8rem;
+		position: absolute;
+	}
 
-    .rightSection {
-        margin: 0;
-    }
+	.rightSection {
+		margin: 0;
+	}
 }
