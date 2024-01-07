@@ -4,16 +4,19 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Project() {
-	console.log(works[0]);
-
 	return (
 		<div className={styles.container}>
-			{works.map((work, index) => {
+			{works.map((work) => {
+				console.log(`project page: ${work.id}`);
+				// const workId = uuidv4();
+				// work.id = workId;
+				// console.log(`project: ${work.id}`);
+
 				return (
 					<Link key={work.id} href={`detail/${work.id}`}>
-						<div className={styles.project} key={work.id}>
+						<div id={work.id} className={styles.project} key={work.id}>
 							<div>
-								<Image src={work.img} width={200} height={130} alt="projectImage" />
+								<Image src={work.imgsrc} width={200} height={130} alt="projectImage" />
 							</div>
 							<h3 className={styles.title}>{work.name}</h3>
 						</div>

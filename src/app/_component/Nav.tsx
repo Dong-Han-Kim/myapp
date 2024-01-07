@@ -7,8 +7,6 @@ import Link from 'next/link';
 import { useSelectedLayoutSegment } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 
-type menuRef = {};
-
 export default function Nav() {
 	const segment = useSelectedLayoutSegment();
 
@@ -38,7 +36,7 @@ export default function Nav() {
 			<ul className={styles.items} ref={toggleRef}>
 				{segment === null ? (
 					<Link href="/">
-						<li style={{ backgroundColor: '#004225' }}>Home</li>
+						<li style={{ backgroundColor: 'rgba(0, 0, 0, 0.4)' }}>Home</li>
 					</Link>
 				) : (
 					<Link href="/">
@@ -47,7 +45,7 @@ export default function Nav() {
 				)}
 				{segment === 'about' ? (
 					<Link href="/about">
-						<li style={{ backgroundColor: '#004225' }}>About</li>
+						<li style={{ backgroundColor: 'rgba(0, 0, 0, 0.4)' }}>About</li>
 					</Link>
 				) : (
 					<Link href="/about">
@@ -56,7 +54,7 @@ export default function Nav() {
 				)}
 				{segment === 'project' ? (
 					<Link href="/project">
-						<li style={{ backgroundColor: '#004225' }}>Project</li>
+						<li style={{ backgroundColor: 'rgba(0, 0, 0, 0.4)' }}>Project</li>
 					</Link>
 				) : (
 					<Link href="/project">
@@ -65,7 +63,7 @@ export default function Nav() {
 				)}
 				{segment === 'contact' ? (
 					<Link href="contact">
-						<li style={{ backgroundColor: '#004225' }}>Contact</li>
+						<li style={{ backgroundColor: 'rgba(0, 0, 0, 0.4)' }}>Contact</li>
 					</Link>
 				) : (
 					<Link href="contact">

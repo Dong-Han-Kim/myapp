@@ -34,11 +34,11 @@
 }
 
 .items li:hover {
-	background-color: #004225;
+	background-color: rgba(0, 0, 0, 0.4);
 }
 
 .active {
-	background-color: #004225;
+	background-color: rgba(0, 0, 0, 0.4);
 }
 
 .menuBtn {

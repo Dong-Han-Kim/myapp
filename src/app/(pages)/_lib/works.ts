@@ -1,17 +1,19 @@
 import { v4 as uuidv4 } from 'uuid';
 
+const workId = uuidv4();
+
 export const works = [
 	{
-		id: uuidv4(),
+		id: 'todo',
 		name: 'TO DO List',
-		img: '/todo.png',
+		imgsrc: '/todo.png',
 		skill: 'React, React-dom, Css, uuid',
 		description: 'React로 제작한 To Do List로 CRUD를 구현하였습니다.',
 	},
 	{
-		id: uuidv4(),
+		id: 'netflix',
 		name: 'NETFLIX CLONE',
-		img: '/netflix.png',
+		imgsrc: '/netflix.png',
 		skill: 'React, Next.js, Tailwind css, Vercel, Zustand, React Query, Firebase',
 		description: 'Next.js와 React Query, Zustand를 공부하기 위해 만들었던 NETFLIX입니다.',
 	},
