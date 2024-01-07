@@ -1,5 +1,5 @@
 import styles from './project.module.css';
-import { works } from '../_lib/works';
+import { works } from '../_asset/works';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -7,11 +7,6 @@ export default function Project() {
 	return (
 		<div className={styles.container}>
 			{works.map((work) => {
-				console.log(`project page: ${work.id}`);
-				// const workId = uuidv4();
-				// work.id = workId;
-				// console.log(`project: ${work.id}`);
-
 				return (
 					<Link key={work.id} href={`detail/${work.id}`}>
 						<div id={work.id} className={styles.project} key={work.id}>

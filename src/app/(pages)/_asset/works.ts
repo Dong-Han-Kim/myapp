@@ -1,13 +1,9 @@
-import { v4 as uuidv4 } from 'uuid';
-
-const workId = uuidv4();
-
 export const works = [
 	{
 		id: 'todo',
-		name: 'TO DO List',
+		name: 'To Do List',
 		imgsrc: '/todo.png',
-		skill: 'React, React-dom, Css, uuid',
+		skill: 'React, React-dom, CSS',
 		description: 'React로 제작한 To Do List로 CRUD를 구현하였습니다.',
 	},
 	{

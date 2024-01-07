@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Nav from '../_component/Nav';
 import styles from './layout.module.css';
-import { phrase } from './_lib/phrase';
+import { phrase } from './_asset/phrase';
 
 export const metadata: Metadata = {
 	title: 'DH',
