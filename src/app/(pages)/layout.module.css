@@ -1,4 +1,4 @@
-.mainAlign {
+.main {
 	display: flex;
 	justify-content: space-between;
 	height: 100dvh;
@@ -43,7 +43,7 @@
 	margin-top: 50px;
 }
 
-.division::after {
+/* .division::after {
 	content: '';
 	display: block;
 	position: relative;
@@ -51,7 +51,7 @@
 	width: inherit;
 	height: 2px;
 	background-color: black;
-}
+} */
 
 .mainContent {
 	display: flex;
@@ -63,6 +63,11 @@
 }
 
 @media screen and (max-width: 800px) {
+	.main {
+		display: flex;
+		flex-direction: column;
+	}
+
 	.headerLayout {
 		display: none;
 	}
@@ -72,13 +77,16 @@
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
+		position: fixed;
+		top: 0;
+		left: 0;
 		width: 100dvw;
-		border-right: none;
-		height: 8rem;
-		position: absolute;
+		padding: 15px;
+		z-index: 5;
 	}
 
 	.rightSection {
-		margin: 0;
+		height: 90dvh;
+		margin-top: 18dvh;
 	}
 }

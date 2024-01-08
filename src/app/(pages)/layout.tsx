@@ -17,7 +17,7 @@ export default function contantLayout({ children, modal }: Props) {
 	const textIndex = Math.floor(Math.random() * phrase.length);
 	const headerContent = phrase[textIndex];
 	return (
-		<div className={styles.mainAlign}>
+		<main className={styles.main}>
 			<div className={styles.leftSection}>
 				<Nav />
 			</div>
@@ -36,6 +36,6 @@ export default function contantLayout({ children, modal }: Props) {
 					{modal}
 				</div>
 			</div>
-		</div>
+		</main>
 	);
 }

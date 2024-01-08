@@ -68,10 +68,17 @@
 		justify-content: space-between;
 		align-items: center;
 		width: 100dvw;
-		border-right: none;
+		height: 100%;
 		background-color: #fed957;
 		height: 8rem;
 		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 5;
+	}
+
+	.logo {
+		margin: 0;
 	}
 
 	.items {
@@ -84,6 +91,7 @@
 		display: none;
 		margin-left: 0;
 		left: 0;
+		z-index: 5;
 	}
 
 	.toggleMenu {

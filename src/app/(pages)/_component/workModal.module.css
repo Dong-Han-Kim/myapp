@@ -1,6 +1,5 @@
 .container {
-	background-color: rgb(15, 15, 15);
-	width: 35dvw;
+	width: 45dvw;
 	height: 70dvh;
 	display: flex;
 	align-items: center;
@@ -11,6 +10,9 @@
 
 .item {
 	margin: 0 auto;
+	background-color: rgb(15, 15, 15);
+	padding: 15px;
+	width: 60dvw;
 }
 
 .imgBox {
@@ -20,11 +22,16 @@
 .textBox {
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start;
+
+	width: inherit;
 }
 
 .text {
 	margin-bottom: 15px;
+	margin-left: 10px;
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
 }
 
 .textTitle {
@@ -32,14 +39,24 @@
 	font-weight: bold;
 }
 
+.textContent {
+	margin: 10px 0 0 25px;
+}
+
 @media screen and (max-width: 768px) {
 	.container {
-		width: inherit;
+		width: 100%;
 		height: 65dvh;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		margin: 0 auto;
 		color: white;
+	}
+
+	.item {
+		margin: 0 auto;
+		padding: 15px;
+		width: 100%;
 	}
 }

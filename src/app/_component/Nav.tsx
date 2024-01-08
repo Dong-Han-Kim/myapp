@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import styles from './Nav.module.css';
-import { MenuBar } from './_asset/icons';
+import { MenuBar } from '../_asset/icons';
 import Link from 'next/link';
 import { useSelectedLayoutSegment } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';

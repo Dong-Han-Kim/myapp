@@ -18,13 +18,16 @@ export function WorkModal({ id, name, imgsrc, skill, description }: Props) {
 				</div>
 				<div className={styles.textBox}>
 					<h3 className={styles.text}>
-						<span className={styles.textTitle}>Name:</span> {name}
+						<p className={styles.textTitle}>Name:</p>
+						<p className={styles.textContent}>{name}</p>
 					</h3>
 					<p className={styles.text}>
-						<span className={styles.textTitle}>Skill:</span> {skill}
+						<p className={styles.textTitle}>Skill:</p>
+						<p className={styles.textContent}>{skill}</p>
 					</p>
 					<p className={styles.text}>
-						<span className={styles.textTitle}>Description:</span> {description}
+						<p className={styles.textTitle}>Description:</p>
+						<p className={styles.textContent}>{description}</p>
 					</p>
 				</div>
 			</div>
