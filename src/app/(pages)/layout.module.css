@@ -14,12 +14,14 @@
 	flex-direction: column;
 	flex: 4 2;
 	text-align: center;
-	justify-content: center;
+	justify-content: flex-start;
+	height: 100dvh;
 }
 
 .headerLayout {
 	text-align: center;
 	width: inherit;
+	height: 11dvh;
 	margin: 20px auto;
 	padding: 15px;
 	background-color: rgba(222, 222, 222, 0.2);
