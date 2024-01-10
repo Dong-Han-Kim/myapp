@@ -2,6 +2,7 @@
 
 import { useRef } from 'react';
 import styles from './page.module.css';
+import { motion } from 'framer-motion';
 
 export default function Home() {
 	const textRef = useRef<HTMLDivElement>(null);
@@ -17,9 +18,9 @@ export default function Home() {
 			<div className={styles.container}>
 				<h1 className={styles.myName}>KIM DONGHAN</h1>
 				<div className={styles.changeTextBox} ref={textRef}>
-					<div className={styles.isActive}>Challenge</div>
-					<div className={styles.isHidden}>Front-end</div>
-					<div className={styles.isHidden}>Developer</div>
+					<div>Challenge</div>
+					<div>Front-end</div>
+					<div>Developer</div>
 				</div>
 			</div>
 		</main>
