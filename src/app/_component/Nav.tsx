@@ -9,19 +9,7 @@ import { useEffect, useRef, useState } from 'react';
 
 export default function Nav() {
 	const segment = useSelectedLayoutSegment();
-
 	const toggleRef = useRef<HTMLUListElement>(null);
-	const [innerWidth, setInnerWidth] = useState(window.innerWidth);
-
-	useEffect(() => {
-		const resizeListener = () => {
-			setInnerWidth(window.innerWidth);
-		};
-		window.addEventListener('resize', resizeListener);
-		window.addEventListener('beforeunload', resizeListener);
-	}, [window]);
-
-	console.log(innerWidth);
 
 	const toggleMenu = () => {
 		if (toggleRef.current) {
@@ -36,7 +24,7 @@ export default function Nav() {
 			<ul className={styles.items} ref={toggleRef}>
 				{segment === null ? (
 					<Link href="/">
-						<li style={{ backgroundColor: 'rgba(0, 0, 0, 0.4)' }}>Home</li>
+						<li style={{ backgroundColor: 'rgba(0, 0, 0)', color: 'white' }}>Home</li>
 					</Link>
 				) : (
 					<Link href="/">
@@ -45,7 +33,7 @@ export default function Nav() {
 				)}
 				{segment === 'about' ? (
 					<Link href="/about">
-						<li style={{ backgroundColor: 'rgba(0, 0, 0, 0.4)' }}>About</li>
+						<li style={{ backgroundColor: 'rgba(0, 0, 0)', color: 'white' }}>About</li>
 					</Link>
 				) : (
 					<Link href="/about">
@@ -54,7 +42,7 @@ export default function Nav() {
 				)}
 				{segment === 'project' ? (
 					<Link href="/project">
-						<li style={{ backgroundColor: 'rgba(0, 0, 0, 0.4)' }}>Project</li>
+						<li style={{ backgroundColor: 'rgba(0, 0, 0)', color: 'white' }}>Project</li>
 					</Link>
 				) : (
 					<Link href="/project">
@@ -63,7 +51,7 @@ export default function Nav() {
 				)}
 				{segment === 'contact' ? (
 					<Link href="contact">
-						<li style={{ backgroundColor: 'rgba(0, 0, 0, 0.4)' }}>Contact</li>
+						<li style={{ backgroundColor: 'rgba(0, 0, 0)', color: 'white' }}>Contact</li>
 					</Link>
 				) : (
 					<Link href="contact">

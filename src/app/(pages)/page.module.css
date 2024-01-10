@@ -41,11 +41,3 @@
 	margin-top: 30px;
 	height: 32px;
 }
-
-.isActive {
-	transition: all 300ms ease-in;
-}
-
-.isHidden {
-	visibility: hidden;
-}
