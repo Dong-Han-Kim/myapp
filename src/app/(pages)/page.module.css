@@ -41,3 +41,11 @@
 	margin-top: 30px;
 	height: 32px;
 }
+
+.isActive {
+	display: block;
+}
+
+.isHidden {
+	display: none;
+}
