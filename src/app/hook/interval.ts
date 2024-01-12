@@ -10,7 +10,7 @@ export const useInterval: InterverType = (callback, delay) => {
 	// callback이 변경될 때 감지해서 최신상태 저장
 	useEffect(() => {
 		savedCallback.current = callback;
-	});
+	}, [callback]);
 
 	// interval과 clear 세팅
 	useEffect(() => {
@@ -23,5 +23,6 @@ export const useInterval: InterverType = (callback, delay) => {
 			let id = setInterval(tick, delay);
 			return () => clearInterval(id); // 바로 클리어해줘서 메모리 차지 X
 		}
+		console.log(delay);
 	}, [delay]);
 };
