@@ -7,17 +7,7 @@ import CloseButton from '../../_component/closeButton';
 import { works } from '@/app/(pages)/_asset/works';
 import { useRouter } from 'next/navigation';
 
-type Props = {
-	prop: {
-		id: string;
-		imgsrc: string;
-		name: string;
-		skill: string;
-		description: string;
-	};
-};
-
-export default function Detail({ prop }: Props) {
+export default function Detail() {
 	const params = useParams();
 	const router = useRouter();
 	const backRoute = () => {
