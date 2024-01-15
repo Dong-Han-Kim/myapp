@@ -26,7 +26,7 @@ export default function Home() {
 	console.log(`name: ${view}`);
 
 	return (
-		<main>
+		<main className={styles.main}>
 			<div className={styles.titleBox}>
 				<h1 className={styles.title}>
 					HOME <span className={styles.division}></span>
