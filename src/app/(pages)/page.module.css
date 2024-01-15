@@ -23,29 +23,122 @@
 
 .container {
 	display: flex;
-	background-color: aqua;
 	justify-content: flex-start;
 	position: absolute;
-	top: 10vw;
+	top: 10rem;
 	left: 0;
+	width: 100%;
 	flex-direction: column;
 }
 
-.myName {
-	font-size: 12vw;
+.myNameOne {
+	font-size: 10rem;
+	position: relative;
+	left: -15rem;
+	opacity: 1;
+	visibility: hidden;
 }
 
-.changeTextBox {
-	font-weight: bold;
-	font-size: 25px;
-	margin-top: 30px;
-	height: 32px;
+.myNameTwo {
+	font-size: 8rem;
+	position: relative;
+	top: 3rem;
+	right: -10rem;
+	opacity: 0.5;
+	visibility: hidden;
+}
+
+.myNameThree {
+	font-size: 6rem;
+	position: relative;
+	top: 6rem;
+	right: -30rem;
+	opacity: 0.2;
+	visibility: hidden;
 }
 
 .isActive {
-	display: block;
+	visibility: visible;
 }
 
-.isHidden {
-	display: none;
+@media screen and (max-width: 1000px) {
+	.container {
+		display: flex;
+		justify-content: flex-start;
+		position: absolute;
+		top: 4rem;
+		width: 100%;
+		flex-direction: column;
+	}
+
+	.myNameOne {
+		font-size: 8rem;
+		position: relative;
+		left: 0rem;
+		opacity: 1;
+		visibility: hidden;
+	}
+
+	.myNameTwo {
+		font-size: 6rem;
+		position: relative;
+		top: 3rem;
+		right: 0rem;
+		opacity: 0.5;
+		visibility: hidden;
+	}
+
+	.myNameThree {
+		font-size: 4rem;
+		position: relative;
+		top: 6rem;
+		right: 0rem;
+		opacity: 0.2;
+		visibility: hidden;
+	}
+
+	.isActive {
+		visibility: visible;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.container {
+		display: flex;
+		justify-content: flex-start;
+		position: absolute;
+		top: 10rem;
+		width: 100%;
+		flex-direction: column;
+	}
+
+	.myNameOne {
+		font-size: 4rem;
+		position: relative;
+		left: 0rem;
+		opacity: 1;
+		visibility: hidden;
+	}
+
+	.myNameTwo {
+		font-size: 3rem;
+		position: relative;
+		top: 3rem;
+		right: 0rem;
+		opacity: 0.5;
+		visibility: hidden;
+	}
+
+	.myNameThree {
+		font-size: 1.5rem;
+		position: relative;
+		top: 6rem;
+		right: 0rem;
+		opacity: 0.2;
+		visibility: hidden;
+	}
+
+	.isActive {
+		visibility: visible;
+	}
 }

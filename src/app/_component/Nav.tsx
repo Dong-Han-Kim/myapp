@@ -19,7 +19,9 @@ export default function Nav() {
 	return (
 		<nav className={styles.container}>
 			<div className={styles.logo}>
-				<Image src={'/logo.png'} width={100} height={100} alt="Logo" />
+				<Link href="/">
+					<Image src={'/logo.png'} width={100} height={100} alt="Logo" />
+				</Link>
 			</div>
 			<ul className={styles.items} ref={toggleRef}>
 				{segment === null ? (

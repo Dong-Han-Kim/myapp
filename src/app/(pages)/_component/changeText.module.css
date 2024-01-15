@@ -1,0 +1,13 @@
+.changeTextBox {
+	font-weight: bold;
+	font-size: 5rem;
+	height: inherit;
+}
+
+.isActive {
+	display: block;
+}
+
+.isHidden {
+	display: none;
+}

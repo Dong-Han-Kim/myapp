@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Nav from '../_component/Nav';
 import styles from './layout.module.css';
 import { phrase } from './_asset/phrase';
+import { ChangeText } from './_component/changeText';
 
 export const metadata: Metadata = {
 	title: 'DH',
@@ -24,11 +25,7 @@ export default function contantLayout({ children, modal }: Props) {
 
 			<div className={styles.rightSection}>
 				<div className={styles.headerLayout}>
-					<div>
-						<p className={styles.text}>{headerContent.text}</p>
-						<p className={styles.author}>- {headerContent.author} -</p>
-					</div>
-					<div className={styles.division}></div>
+					<ChangeText />
 				</div>
 
 				<div className={styles.mainContent}>

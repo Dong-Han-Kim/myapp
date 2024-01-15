@@ -1,27 +1,29 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './page.module.css';
-import { useInterval } from '../hook/interval';
 import clsx from 'clsx';
 
 export default function Home() {
-	const textRef = useRef<HTMLDivElement>(null);
 	const [view, setView] = useState<number>(0);
-	let currentCount = 0;
 
-	const changeText = () => {
-		setView(view + 1);
-		if (view === 2) {
-			setView(0);
-		}
+	useEffect(() => {
+		const viewerTimer = () => {
+			if (view < 3) {
+				setView(view + 1);
+			}
+		};
 
-		console.log(view);
-	};
+		const timer = setTimeout(() => {
+			viewerTimer();
+		}, 300);
 
-	useInterval(() => {
-		changeText();
-	}, 3000);
+		return () => {
+			clearTimeout(timer);
+		};
+	}, [view]);
+
+	console.log(`name: ${view}`);
 
 	return (
 		<main>
@@ -31,18 +33,26 @@ export default function Home() {
 				</h1>
 			</div>
 			<div className={styles.container}>
-				<h1 className={styles.myName}>KIM DONGHAN</h1>
-				<div className={styles.changeTextBox} ref={textRef}>
-					<div className={clsx({ [styles.isActive]: view === 0, [styles.isHidden]: view !== 0 })}>
-						Challenge
-					</div>
-					<div className={clsx({ [styles.isActive]: view === 1, [styles.isHidden]: view !== 1 })}>
-						Front-end
-					</div>
-					<div className={clsx({ [styles.isActive]: view === 2, [styles.isHidden]: view !== 2 })}>
-						Developer
-					</div>
-				</div>
+				<h1
+					className={`${styles.myNameOne} ${clsx({
+						[styles.isActive]: view > 1,
+					})}`}>
+					KIM DONGHAN
+				</h1>
+
+				<h3
+					className={`${styles.myNameTwo} ${clsx({
+						[styles.isActive]: view > 0,
+					})}`}>
+					KIM DONGHAN
+				</h3>
+
+				<h5
+					className={`${styles.myNameThree} ${clsx({
+						[styles.isActive]: view >= 0,
+					})}`}>
+					KIM DONGHAN
+				</h5>
 			</div>
 		</main>
 	);
