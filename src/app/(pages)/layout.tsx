@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Nav from '../_component/Nav';
 import styles from './layout.module.css';
 import { phrase } from './_asset/phrase';
-import { ChangeText } from './_component/ChangeText';
+import { ChangeText } from '../_component/ChangeText';
 
 export const metadata: Metadata = {
 	title: 'DH',
