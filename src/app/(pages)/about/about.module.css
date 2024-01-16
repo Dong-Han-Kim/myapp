@@ -108,7 +108,7 @@
 	.titleBox {
 		width: 100%;
 		position: relative;
-		top: 0;
+		top: 15px;
 	}
 
 	.container {
