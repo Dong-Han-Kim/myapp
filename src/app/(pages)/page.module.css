@@ -123,7 +123,7 @@
 	.titleBox {
 		width: 100%;
 		position: relative;
-		top: -15.5rem;
+		top: -24rem;
 	}
 
 	.container {
@@ -133,6 +133,7 @@
 		width: 100%;
 		height: inherit;
 		flex-direction: column;
+		margin-top: 50px;
 	}
 
 	.myNameOne {
