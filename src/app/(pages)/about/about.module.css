@@ -1,3 +1,8 @@
+.main {
+	display: flex;
+	flex-direction: column;
+}
+
 .titleBox {
 	width: 100%;
 }
@@ -103,7 +108,7 @@
 	.titleBox {
 		width: 100%;
 		position: relative;
-		top: 12rem;
+		top: 0;
 	}
 
 	.container {

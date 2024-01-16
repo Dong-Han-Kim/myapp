@@ -121,9 +121,10 @@
 
 @media screen and (max-width: 768px) {
 	.titleBox {
-		width: 100%;
+		/* width: 100%;
 		position: relative;
-		top: -24rem;
+		top: -24rem; */
+		visibility: hidden;
 	}
 
 	.container {
