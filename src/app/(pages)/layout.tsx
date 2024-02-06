@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
 import Nav from '../_component/Nav';
 import styles from './layout.module.css';
-import { phrase } from './_asset/phrase';
-import { ChangeText } from '../_component/ChangeText';
+import { Header } from '../_component/header';
 
 export const metadata: Metadata = {
 	title: 'DH',
@@ -15,8 +14,6 @@ type Props = {
 };
 
 export default function contantLayout({ children, modal }: Props) {
-	const textIndex = Math.floor(Math.random() * phrase.length);
-	const headerContent = phrase[textIndex];
 	return (
 		<main className={styles.main}>
 			<div className={styles.leftSection}>
@@ -25,7 +22,7 @@ export default function contantLayout({ children, modal }: Props) {
 
 			<div className={styles.rightSection}>
 				<div className={styles.headerLayout}>
-					<ChangeText />
+					<Header />
 				</div>
 
 				<div className={styles.mainContent}>

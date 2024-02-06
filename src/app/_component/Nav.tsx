@@ -5,7 +5,7 @@ import styles from './Nav.module.css';
 import { MenuBar } from '../_asset/icons';
 import Link from 'next/link';
 import { useSelectedLayoutSegment } from 'next/navigation';
-import { useEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
 
 export default function Nav() {
 	const segment = useSelectedLayoutSegment();
@@ -16,6 +16,7 @@ export default function Nav() {
 			toggleRef.current.classList.toggle(styles.toggleMenu);
 		}
 	};
+
 	return (
 		<nav className={styles.container}>
 			<div className={styles.logo}>

@@ -5,11 +5,6 @@ import Image from 'next/image';
 export default function About() {
 	return (
 		<main className={styles.main}>
-			<div className={styles.titleBox}>
-				<h1 className={styles.title}>
-					ABOUT <span className={styles.division}></span>
-				</h1>
-			</div>
 			<div className={styles.container}>
 				<div className={styles.about}>
 					<h3 className={styles.categories}>ABOUT ME</h3>
@@ -23,7 +18,7 @@ export default function About() {
 							<p className={styles.date}>2011.02 ~ 2018.02</p>
 						</li>
 						<li>
-							<p>충청 ICT 취·창업 역량강화 프로그램</p>
+							<p>충청 ICT취·창업 역량강화 프로그램</p>
 							<p className={styles.date}>2023.10 ~ 2023.11</p>
 						</li>
 					</ul>

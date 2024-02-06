@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import styles from './workModal.module.css';
+import Link from 'next/link';
 
 type Props = {
 	id: string;
@@ -7,9 +8,11 @@ type Props = {
 	name: string;
 	skill: string;
 	description: string;
+	site: string;
+	github: string;
 };
 
-export function WorkModal({ id, name, imgsrc, skill, description }: Props) {
+export function WorkModal({ id, name, imgsrc, skill, description, site, github }: Props) {
 	return (
 		<div className={styles.container}>
 			<div className={styles.item} key={id}>
@@ -21,14 +24,26 @@ export function WorkModal({ id, name, imgsrc, skill, description }: Props) {
 						<p className={styles.textTitle}>Name:</p>
 						<p className={styles.textContent}>{name}</p>
 					</h3>
-					<p className={styles.text}>
+					<div className={styles.text}>
 						<p className={styles.textTitle}>Skill:</p>
 						<p className={styles.textContent}>{skill}</p>
-					</p>
-					<p className={styles.text}>
+					</div>
+					<div className={styles.text}>
 						<p className={styles.textTitle}>Description:</p>
 						<p className={styles.textContent}>{description}</p>
-					</p>
+					</div>
+					<div className={styles.text}>
+						<p className={styles.textTitle}>Site:</p>
+						<Link href={site}>
+							<p className={styles.textContent}>{site}</p>
+						</Link>
+					</div>
+					<div className={styles.text}>
+						<p className={styles.textTitle}>Github:</p>
+						<Link href={github}>
+							<p className={styles.textContent}>{github}</p>
+						</Link>
+					</div>
 				</div>
 			</div>
 		</div>

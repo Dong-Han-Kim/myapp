@@ -1,23 +1,7 @@
-.titleBox {
-	width: 100%;
-}
-
-.title {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
+.main {
 	display: flex;
-}
-
-.title::after {
-	content: '';
-	display: inline-block;
-	position: absolute;
-	margin: 1.25rem 0 0 8rem;
-	width: 91%;
-	height: 2px;
-	background-color: black;
+	flex-direction: column;
+	padding: 10px;
 }
 
 .container {
@@ -26,7 +10,6 @@
 	justify-content: center;
 	align-items: center;
 	position: relative;
-	margin-top: 50px;
 }
 
 .about {
@@ -100,17 +83,10 @@
 }
 
 @media screen and (max-width: 768px) {
-	.titleBox {
-		width: 100%;
-		position: relative;
-		top: 8rem;
-	}
-
 	.container {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		top: 5rem;
 	}
 
 	.about {

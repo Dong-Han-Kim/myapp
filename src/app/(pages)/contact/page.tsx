@@ -5,11 +5,6 @@ import Link from 'next/link';
 export default function Contact() {
 	return (
 		<div>
-			<div className={styles.titleBox}>
-				<h1 className={styles.title}>
-					CONTACT ME <span className={styles.division}></span>
-				</h1>
-			</div>
 			<div className={styles.container}>
 				<div className={styles.contact}>
 					<div className={styles.icon}>

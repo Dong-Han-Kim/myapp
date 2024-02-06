@@ -27,11 +27,6 @@ export default function Home() {
 
 	return (
 		<main className={styles.main}>
-			<div className={styles.titleBox}>
-				<h1 className={styles.title}>
-					HOME <span className={styles.division}></span>
-				</h1>
-			</div>
 			<div className={styles.container}>
 				<div className={styles.myNames}>
 					<p

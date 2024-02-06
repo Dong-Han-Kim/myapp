@@ -27,6 +27,8 @@ export default function Detail() {
 								name={work.name}
 								skill={work.skill}
 								description={work.description}
+								site={work.site}
+								github={work.github}
 							/>
 						</div>
 					) : null;
