@@ -3,9 +3,9 @@
 import { WorkModal } from '@/app/(pages)/_component/WorkModal';
 import { useParams } from 'next/navigation';
 import styles from './detail.module.css';
-import CloseButton from '../../_component/closeButton';
 import { works } from '@/app/(pages)/_asset/works';
 import { useRouter } from 'next/navigation';
+import { CloseButton } from '../../_component/closeButton';
 
 export default function Detail() {
 	const params = useParams();
@@ -16,7 +16,9 @@ export default function Detail() {
 
 	return (
 		<>
-			<CloseButton />
+			<div className={styles.CloseButton}>
+				<CloseButton />
+			</div>
 			<div className={styles.container} onClick={backRoute}>
 				{works.map((work) => {
 					return work.id === params.id ? (
