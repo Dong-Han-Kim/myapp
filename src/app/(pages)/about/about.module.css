@@ -1,7 +1,9 @@
 .main {
 	display: flex;
 	flex-direction: column;
+	position: relative;
 	padding: 10px;
+	top: -4rem;
 }
 
 .container {
@@ -87,10 +89,6 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-	}
-
-	.about {
-		margin-top: 25px;
 	}
 
 	.education {
