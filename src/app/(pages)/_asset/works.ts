@@ -13,7 +13,7 @@ export const works = [
 		name: 'NETFLIX CLONE',
 		imgsrc: '/netflix.png',
 		skill: 'React, Next.js, Tailwind css, Vercel, React Query',
-		description: 'Next.js와 React Query, Zustand를 공부하기 위해 만들었던 NETFLIX입니다.',
+		description: 'Next.js와 React Query를 공부하기 위해 만들었던 NETFLIX입니다.',
 		site: 'https://netflix-six-nu.vercel.app/',
 		github: 'https://github.com/Dong-Han-Kim/Netflix.git',
 	},
