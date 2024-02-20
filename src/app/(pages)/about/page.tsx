@@ -6,11 +6,11 @@ export default function About() {
 	return (
 		<main className={styles.main}>
 			<div className={styles.container}>
-				<div className={styles.about}>
+				<section className={styles.about}>
 					<h3 className={styles.categories}>ABOUT ME</h3>
 					<p>안녕하세요. 프론트엔드 개발자가 되고 싶은 김동한입니다. 방문해 주셔서 감사합니다.</p>
-				</div>
-				<div className={styles.education}>
+				</section>
+				<section className={styles.education}>
 					<h3 className={styles.categories}>EDUCATION</h3>
 					<ul>
 						<li>
@@ -22,8 +22,8 @@ export default function About() {
 							<p className={styles.date}>2023.10 ~ 2023.11</p>
 						</li>
 					</ul>
-				</div>
-				<div className={styles.skill}>
+				</section>
+				<section className={styles.skill}>
 					<h3 className={styles.categories}>SKILL</h3>
 					<div>
 						<h5 className={styles.subTitle}>Basic</h5>
@@ -46,7 +46,7 @@ export default function About() {
 							<GitHub />
 						</div>
 					</div>
-				</div>
+				</section>
 			</div>
 		</main>
 	);
