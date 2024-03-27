@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import styles from './workModal.module.css';
 import Link from 'next/link';
-import { CloseButton } from '../@modal/_component/closeButton';
 
 type Props = {
 	id: string;
