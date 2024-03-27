@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Nav from '../_component/Nav';
 import styles from './layout.module.css';
-import { Header } from '../_component/header';
+import { Header } from '../_component/Header';
 
 export const metadata: Metadata = {
 	title: 'DH',

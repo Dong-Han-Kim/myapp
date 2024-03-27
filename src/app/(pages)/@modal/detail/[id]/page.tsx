@@ -5,7 +5,7 @@ import { useParams } from 'next/navigation';
 import styles from './detail.module.css';
 import { works } from '@/app/(pages)/_asset/works';
 import { useRouter } from 'next/navigation';
-import { CloseButton } from '@/app/(pages)/@modal/component/CloseButton';
+import CloseButton from '@/app/(pages)/_component/CloseButton';
 
 export default function Detail() {
 	const params = useParams();

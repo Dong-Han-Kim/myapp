@@ -3,7 +3,7 @@
 import { useRouter } from 'next/navigation';
 import styles from './closeButton.module.css';
 
-export function CloseButton() {
+export default function CloseButton() {
 	const router = useRouter();
 	const backRoute = () => {
 		router.back();
