@@ -1,49 +1,44 @@
 .main {
 	display: flex;
 	justify-content: space-between;
-	height: 100dvh;
-}
-
-.leftSection {
-	flex: 1 1;
-	max-width: 10rem;
-}
-
-.rightSection {
-	display: flex;
 	flex-direction: column;
-	flex: 4 2;
-	text-align: center;
-	justify-content: flex-start;
 	height: 100dvh;
 }
 
-.headerLayout {
-	text-align: center;
-	width: inherit;
-	height: 11dvh;
-	margin: 0 auto 4rem;
-	display: flex;
-	align-items: center;
+.topSection {
+	width: 100dvw;
+	position: fixed;
+	z-index: 5;
 }
 
-.mainContent {
+.bottomSection {
+	display: flex;
+	text-align: center;
+	justify-content: space-between;
+	position: absolute;
+	inset: 7.5rem 12.5rem 1rem 4.5rem;
+}
+
+.leftLayout {
+	text-align: center;
+	width: 12.5rem;
+}
+
+.rightContent {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	position: relative;
-	width: 100%;
-	height: 100dvh;
-	margin: 25px 15px 0 15px;
+	width: 82rem;
+	margin: 0 auto;
 }
 
 @media screen and (max-width: 800px) {
 	.main {
 		display: flex;
-		flex-direction: column;
 	}
 
-	.leftSection {
+	.topSection {
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
@@ -56,18 +51,21 @@
 		z-index: 1;
 	}
 
-	.rightSection {
-		height: 100%;
-		margin-top: 7rem;
+	.bottomSection {
+		/* height: 100%;
+		margin-top: 7rem; */
+		inset: 100px 0px 0 0;
 	}
 
-	.mainContent {
-		display: flex;
-		justify-content: center;
-		align-items: center;
+	.leftLayout {
 		position: relative;
-		width: 100%;
-		height: fit-content;
-		margin: 3rem 0 0 0;
+		top: 0;
+		left: 0;
+	}
+
+	.rightContent {
+		display: flex;
+
+		margin: 0 auto;
 	}
 }

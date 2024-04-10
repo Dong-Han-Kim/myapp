@@ -1,42 +1,36 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
-import { ChangeText } from './ChangeText';
-import style from './header.module.css';
+import style from './Title.module.css';
 
-export function Header() {
+export default function Title() {
 	const pathname = usePathname();
 	console.log(pathname);
 
 	return (
 		<main className={style.main}>
-			<ChangeText />
 			<div className={style.changeTitle}>
 				{pathname === '/' ? (
 					<div className={style.titleBox}>
-						<h1>HOME</h1>
-						<div className={style.division}></div>
+						<h1 className={style.title}>HOME</h1>
 					</div>
 				) : null}
 
 				{pathname === '/about' ? (
 					<div className={style.titleBox}>
-						<h1>ABOUT</h1>
-						<div className={style.division}></div>
+						<h1 className={style.title}>ABOUT</h1>
 					</div>
 				) : null}
 
 				{pathname === '/project' ? (
 					<div className={style.titleBox}>
-						<h1>PROJECT</h1>
-						<div className={style.division}></div>
+						<h1 className={style.title}>PROJECT</h1>
 					</div>
 				) : null}
 
 				{pathname === '/contact' ? (
 					<div className={style.titleBox}>
-						<h1>CONTACT</h1>
-						<div className={style.division}></div>
+						<h1 className={style.title}>CONTACT</h1>
 					</div>
 				) : null}
 			</div>

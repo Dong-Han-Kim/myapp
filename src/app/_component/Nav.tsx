@@ -30,7 +30,7 @@ export default function Nav() {
 		<nav className={styles.container}>
 			<div className={styles.logo}>
 				<Link href="/">
-					<Image src={'/logo.png'} width={100} height={100} alt="Logo" />
+					<Image src={'/logo.png'} width={90} height={90} alt="Logo" />
 				</Link>
 			</div>
 			<ul className={styles.items} ref={toggleRef} onClick={listHandler}>
@@ -68,6 +68,15 @@ export default function Nav() {
 				) : (
 					<Link href="contact">
 						<li>Contact</li>
+					</Link>
+				)}
+				{segment === 'comment' ? (
+					<Link href="comment">
+						<li style={{ backgroundColor: 'rgba(0, 0, 0)', color: 'white' }}>Contact</li>
+					</Link>
+				) : (
+					<Link href="comment">
+						<li>Comment</li>
 					</Link>
 				)}
 			</ul>

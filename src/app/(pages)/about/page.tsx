@@ -25,24 +25,22 @@ export default function About() {
 				</section>
 				<section className={styles.skill}>
 					<h3 className={styles.categories}>SKILL</h3>
-					<div>
-						<h5 className={styles.subTitle}>Basic</h5>
+					<div className={styles.skillIcons}>
 						<div className={styles.skillBox}>
-							<Image src={'/HTML5.svg.png'} width={50} height={50} alt="HTML" />
-							<Image src={'/CSS.svg.png'} width={50} height={50} alt="CSS" />
-							<Image src={'/JavaScript.svg.png'} width={50} height={50} alt="JavaScript" />
+							<h5 className={styles.subTitle}>Basic</h5>
+							<Image src={'/HTML.png'} width={50} height={50} alt="HTML" />
+							<Image src={'/CSS.png'} width={50} height={50} alt="CSS" />
+							<Image src={'/js.svg'} width={50} height={50} alt="JavaScript" />
 						</div>
-						<h5 className={styles.subTitle}>Library</h5>
 						<div className={styles.skillBox}>
+							<h5 className={styles.subTitle}>Library & Framework</h5>
 							<Image src={'/React.svg.png'} width={50} height={50} alt="React" />
+							<Image src={'/next.svg'} width={50} height={50} alt="Next.js" />
+							<Image src={'/tailwindcss.svg'} width={50} height={50} alt="Tailwind-css" />
 						</div>
-						<h5 className={styles.subTitle}>Framework</h5>
+
 						<div className={styles.skillBox}>
-							<Next />
-							<Image src={'/Tailwind.svg.png'} width={150} height={50} alt="Tailwind-css" />
-						</div>
-						<h5 className={styles.subTitle}>etc</h5>
-						<div className={styles.skillBox}>
+							<h5 className={styles.subTitle}>etc</h5>
 							<GitHub />
 						</div>
 					</div>
