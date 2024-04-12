@@ -1,0 +1,43 @@
+.input {
+	margin-top: 25px;
+	border: 1px solid black;
+	border-radius: 5px;
+	outline: none;
+	padding: 5px;
+}
+
+.edit__title {
+	width: 100%;
+}
+
+.title__input {
+	width: 900px;
+	height: 35px;
+}
+
+.edit__login {
+	width: 900px;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	padding: 0 150px;
+}
+
+.login__name {
+	width: 30%;
+	height: 35px;
+}
+
+.login__password {
+	width: 30%;
+	height: 35px;
+}
+
+.edit__comment {
+	width: 100%;
+}
+
+.comment__create {
+	width: 900px;
+	height: 300px;
+}

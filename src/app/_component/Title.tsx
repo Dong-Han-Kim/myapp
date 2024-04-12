@@ -33,6 +33,12 @@ export default function Title() {
 						<h1 className={style.title}>CONTACT</h1>
 					</div>
 				) : null}
+
+				{pathname === '/comment' ? (
+					<div className={style.titleBox}>
+						<h1 className={style.title}>Comment</h1>
+					</div>
+				) : null}
 			</div>
 		</main>
 	);

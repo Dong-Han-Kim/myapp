@@ -1,0 +1,26 @@
+.comment__main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+}
+
+.comment__top {
+	width: 100%;
+	text-align: center;
+}
+
+.comment__title {
+	display: inline-block;
+}
+
+.edit__btn {
+	display: inline-block;
+	position: absolute;
+	width: 100px;
+	right: 0;
+	color: white;
+	background-color: black;
+	border: none;
+	padding: 10px;
+}
