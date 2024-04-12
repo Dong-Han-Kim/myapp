@@ -21,7 +21,8 @@ interface Comment {
 	onPassword: Dispatch<SetStateAction<string>>;
 	onComment: Dispatch<SetStateAction<string>>;
 }
-export default function Edit({ onTitle, onName, onPassword, onComment }: Comment) {
+
+export default function CommentDetail() {
 	const [commentsList, setCommentsList] = useState<Comments[]>([]);
 	const params = useParams();
 	console.log(params);
