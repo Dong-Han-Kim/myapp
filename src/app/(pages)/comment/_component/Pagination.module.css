@@ -1,0 +1,15 @@
+.isActive {
+	width: 25px;
+	height: 25px;
+	border: none;
+	background-color: black;
+	color: white;
+}
+
+.isInactive {
+	width: 25px;
+	height: 25px;
+	border: none;
+	background-color: transparent;
+	color: black;
+}

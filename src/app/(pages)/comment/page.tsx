@@ -1,20 +1,22 @@
 'use client';
 
-import { Fragment, useCallback, useEffect, useState } from 'react';
+import { Dispatch, Fragment, SetStateAction, useCallback, useEffect, useRef, useState } from 'react';
 import Edit from './_component/Edit';
 import style from './page.module.css';
 import { DocumentData, collection, doc, getDocs, setDoc } from 'firebase/firestore';
 import { v4 as uuidv4 } from 'uuid';
 import { db } from '@/firebase';
 import Link from 'next/link';
+import Pagination from './_component/Pagination';
 
 interface Comment {
 	title: string;
 	name: string;
-	password: string | number;
+	password: string;
 	comment: string;
 	commentId: string;
 	today: string;
+	time: number;
 }
 
 export default function Comment() {
@@ -24,9 +26,14 @@ export default function Comment() {
 	const [password, setPassword] = useState('');
 	const [comment, setComment] = useState('');
 	const [commentsList, setCommentsList] = useState<Comment[]>([]);
+	const [page, setPage] = useState(1);
+	const limit = useRef(5);
 	const date = new Date();
 	const today = date.toLocaleDateString();
+	const time = Date.now();
 	const commentId = uuidv4();
+
+	const amount = (page - 1) * limit.current;
 
 	async function setCommentData() {
 		if (title.length === 0 || name.length === 0 || password.length === 0 || comment.length === 0) {
@@ -41,6 +48,7 @@ export default function Comment() {
 				password,
 				comment,
 				today,
+				time,
 				commentId,
 			});
 		}
@@ -58,48 +66,66 @@ export default function Comment() {
 			const data = commentsData.docs.map((doc: DocumentData) => ({ ...doc.data() }));
 			setCommentsList(data);
 		}
-		getCommentsData();
-	}, []);
+		if (!isEdit) {
+			getCommentsData();
+		}
+	}, [isEdit]);
 
 	return (
 		<main className={style.comment__main}>
 			<section className={style.comment__top}>
 				<h1 className={style.comment__title}>Comments</h1>
+				<p>수정이 필요한 부분이나 부족한 부분이 있다면 짧은 글이라도 남겨주세요. 저에게 많은 도움이 됩니다.</p>
+			</section>
+			<section className={style.comment__middle}>
+				{!isEdit ? (
+					<ul className={style.comment__list}>
+						{commentsList
+							.sort((a, b) => b.time - a.time)
+							.map((item) => {
+								return (
+									<Link key={item.commentId} href={`/comment/${item.commentId}`}>
+										<li className={style.list__item}>
+											<span className={style.title}>{item.title}</span>
+											<div className={style.item__info}>
+												<span className={style.name}>{item.name}</span>
+												<span className={style.today}>{item.today}</span>
+											</div>
+										</li>
+									</Link>
+								);
+							})
+							.slice(amount, amount + limit.current)}
+					</ul>
+				) : (
+					<Edit onTitle={setTitle} onName={setName} onPassword={setPassword} onComment={setComment} />
+				)}
 
+				<div>
+					<Pagination total={commentsList.length} limit={limit.current} page={page} setPage={setPage} />
+				</div>
+			</section>
+			<section className={style.comment__bottom}>
 				{!isEdit ? (
 					<button onClick={() => setIsEdit(!isEdit)} className={style.edit__btn}>
 						<h1>글쓰기</h1>
 					</button>
 				) : (
-					<button
-						onClick={async () => {
-							setCommentData();
-						}}
-						className={style.edit__btn}>
-						<h1>저장</h1>
-					</button>
+					<div className={style.edit__btnBox}>
+						<button
+							onClick={async () => {
+								setCommentData();
+							}}
+							className={style.edit__btn}>
+							<h1>저장</h1>
+						</button>
+
+						<button onClick={() => setIsEdit(!isEdit)} className={style.cancel__btn}>
+							<h1>취소</h1>
+						</button>
+					</div>
 				)}
 			</section>
-			<section className={style.comment__middle}>
-				{!isEdit ? (
-					<ul>
-						{commentsList.map((item) => {
-							return (
-								<Link key={item.commentId} href={`/commentDetail/${item.commentId}`}>
-									<li>
-										<span>{item.title}</span>
-										<span>{item.name}</span>
-										<span>{item.today}</span>
-									</li>
-								</Link>
-							);
-						})}
-					</ul>
-				) : (
-					<Edit onTitle={setTitle} onName={setName} onPassword={setPassword} onComment={setComment} />
-				)}
-			</section>
-			<section></section>
 		</main>
 	);
 }

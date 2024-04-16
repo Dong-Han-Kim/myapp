@@ -62,20 +62,20 @@ export default function Nav() {
 					</Link>
 				)}
 				{segment === 'contact' ? (
-					<Link href="contact">
+					<Link href="/contact">
 						<li style={{ backgroundColor: 'rgba(0, 0, 0)', color: 'white' }}>Contact</li>
 					</Link>
 				) : (
-					<Link href="contact">
+					<Link href="/contact">
 						<li>Contact</li>
 					</Link>
 				)}
 				{segment === 'comment' ? (
-					<Link href="comment">
-						<li style={{ backgroundColor: 'rgba(0, 0, 0)', color: 'white' }}>Contact</li>
+					<Link href="/comment">
+						<li style={{ backgroundColor: 'rgba(0, 0, 0)', color: 'white' }}>Comment</li>
 					</Link>
 				) : (
-					<Link href="comment">
+					<Link href="/comment">
 						<li>Comment</li>
 					</Link>
 				)}

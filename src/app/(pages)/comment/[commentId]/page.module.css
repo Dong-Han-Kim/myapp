@@ -1,0 +1,129 @@
+.content__box {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+	border: 1px solid black;
+	border-radius: 3px;
+}
+
+.detail__title {
+	width: 100%;
+	height: 35px;
+	border-bottom: 1px solid black;
+}
+
+.title__content {
+	width: 800px;
+	height: 35px;
+	line-height: 35px;
+}
+
+.detail__login {
+	width: 800px;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	padding: 0 150px;
+	height: 35px;
+	border-bottom: 1px solid black;
+}
+
+.login__name {
+	width: 300px;
+	height: 35px;
+	line-height: 35px;
+	border-right: 1px solid black;
+}
+
+.login__today {
+	width: 300px;
+	height: 35px;
+	line-height: 35px;
+}
+
+.comment__area {
+	width: 100%;
+}
+
+.comment__read {
+	width: 800px;
+	height: 300px;
+}
+
+.comment__bottom {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.modify__box {
+	display: flex;
+	width: 300px;
+	margin-top: 15px;
+	justify-content: flex-end;
+	position: relative;
+	right: 0;
+}
+
+.comment__modify {
+	width: 100px;
+	color: white;
+	background-color: black;
+	border: none;
+	padding: 10px;
+}
+
+.modify__cancel {
+	width: 100px;
+	color: white;
+	background-color: black;
+	border: none;
+	padding: 10px;
+	margin-left: 20px;
+}
+
+/* Modify Style */
+.input {
+	margin-top: 25px;
+	border: 1px solid black;
+	border-radius: 5px;
+	outline: none;
+	padding: 5px;
+}
+
+.edit__title {
+	width: 100%;
+}
+
+.title__input {
+	width: 900px;
+	height: 35px;
+}
+
+.edit__login {
+	width: 900px;
+	display: flex;
+	justify-content: flex-start;
+	margin: 0 auto;
+}
+
+.login__name {
+	width: 30%;
+	height: 35px;
+	margin-right: 20px;
+}
+
+.login__password {
+	width: 30%;
+	height: 35px;
+}
+
+.edit__comment {
+	width: 100%;
+}
+
+.comment__create {
+	width: 900px;
+	height: 300px;
+}

@@ -5,6 +5,7 @@
 	width: 100%;
 }
 
+/* top */
 .comment__top {
 	width: 100%;
 	text-align: center;
@@ -14,11 +15,72 @@
 	display: inline-block;
 }
 
+/* middle */
+.comment__middle {
+	margin: 25px auto;
+	width: 900px;
+	padding: 15px;
+}
+
+.comment__list {
+	list-style: none;
+}
+
+.list__item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 1px solid black;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	padding: 10px;
+}
+
+.item__info {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.title {
+	text-align: center;
+	font-size: 20px;
+	margin: 0 auto;
+}
+
+.name {
+	font-weight: 700;
+	margin-right: 20px;
+}
+
+.today {
+	color: darkgrey;
+	font-size: 13px;
+}
+
+/* bottom */
+.comment__bottom {
+	margin-top: 25px;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.edit__btnBox {
+	display: flex;
+	width: 300px;
+}
+
 .edit__btn {
-	display: inline-block;
-	position: absolute;
 	width: 100px;
-	right: 0;
+	color: white;
+	background-color: black;
+	border: none;
+	padding: 10px;
+	margin-right: 20px;
+}
+
+.cancel__btn {
+	width: 100px;
 	color: white;
 	background-color: black;
 	border: none;

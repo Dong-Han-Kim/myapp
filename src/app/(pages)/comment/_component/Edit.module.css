@@ -11,21 +11,21 @@
 }
 
 .title__input {
-	width: 900px;
+	width: 800px;
 	height: 35px;
 }
 
 .edit__login {
-	width: 900px;
+	width: 800px;
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 	margin: 0 auto;
-	padding: 0 150px;
 }
 
 .login__name {
 	width: 30%;
 	height: 35px;
+	margin-right: 20px;
 }
 
 .login__password {
@@ -38,6 +38,6 @@
 }
 
 .comment__create {
-	width: 900px;
+	width: 800px;
 	height: 300px;
 }
