@@ -1,36 +1,19 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 포트폴리오 웹 사이트
+***
+저를 간략하게 소개하는 사이트 입니다.
+***
+## 사용 기술
+React.js, Next.js, TypeScript, Firebase
 
-## Getting Started
 
-First, run the development server:
+### Typescript 사용 이유
+타입스크립트를 사용하여 코딩하는 모습을 보고 타입의 지정을 통해 에러를 방지하고 디버깅이 쉽다는 장점이 있다는 것을 느꼈고
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+사용하는데 익숙해지면 코딩이 좀 더 편해질 것이라 생각했습니다.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+또한 많은 곳에 수요가 있다는 것은 그만큼 성능이 좋은 언어라고 생각되어 경험해보기 위해 사용하였습니다.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Firebase
+방명록을 제작하는데 데이터를 저장할 곳이 필요했습니다.
+그래서 Firebase가 배우고 적용시키기가 빠를 것 같다고 판단해서 사용하게 되었습니다.
