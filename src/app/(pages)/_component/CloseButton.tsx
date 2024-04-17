@@ -1,7 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import styles from './closeButton.module.css';
+import styles from './CloseButton.module.css';
 
 export default function CloseButton() {
 	const router = useRouter();

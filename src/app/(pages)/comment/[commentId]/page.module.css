@@ -14,30 +14,30 @@
 }
 
 .title__content {
-	width: 800px;
+	width: 50rem;
 	height: 35px;
 	line-height: 35px;
 }
 
 .detail__login {
-	width: 800px;
+	width: 50rem;
 	display: flex;
 	justify-content: space-between;
 	margin: 0 auto;
-	padding: 0 150px;
+	padding: 0 9.375rem;
 	height: 35px;
 	border-bottom: 1px solid black;
 }
 
 .login__name {
-	width: 300px;
+	width: 19rem;
 	height: 35px;
 	line-height: 35px;
 	border-right: 1px solid black;
 }
 
 .login__today {
-	width: 300px;
+	width: 19rem;
 	height: 35px;
 	line-height: 35px;
 }
@@ -47,8 +47,8 @@
 }
 
 .comment__read {
-	width: 800px;
-	height: 300px;
+	width: 50rem;
+	height: 19rem;
 }
 
 .comment__bottom {
@@ -59,7 +59,7 @@
 
 .modify__box {
 	display: flex;
-	width: 300px;
+	width: 19rem;
 	margin-top: 15px;
 	justify-content: flex-end;
 	position: relative;
@@ -67,7 +67,7 @@
 }
 
 .comment__modify {
-	width: 100px;
+	width: 6.25rem;
 	color: white;
 	background-color: black;
 	border: none;
@@ -75,7 +75,7 @@
 }
 
 .modify__cancel {
-	width: 100px;
+	width: 6.25rem;
 	color: white;
 	background-color: black;
 	border: none;
@@ -97,12 +97,12 @@
 }
 
 .title__input {
-	width: 900px;
+	width: 50rem;
 	height: 35px;
 }
 
 .edit__login {
-	width: 900px;
+	width: 50rem;
 	display: flex;
 	justify-content: flex-start;
 	margin: 0 auto;
@@ -124,6 +124,6 @@
 }
 
 .comment__create {
-	width: 900px;
-	height: 300px;
+	width: 50rem;
+	height: 19rem;
 }

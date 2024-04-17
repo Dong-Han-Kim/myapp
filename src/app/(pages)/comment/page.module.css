@@ -18,7 +18,7 @@
 /* middle */
 .comment__middle {
 	margin: 25px auto;
-	width: 900px;
+	width: 50rem;
 	padding: 15px;
 }
 
@@ -67,11 +67,11 @@
 
 .edit__btnBox {
 	display: flex;
-	width: 300px;
+	width: 19rem;
 }
 
 .edit__btn {
-	width: 100px;
+	width: 6.25rem;
 	color: white;
 	background-color: black;
 	border: none;
@@ -80,9 +80,15 @@
 }
 
 .cancel__btn {
-	width: 100px;
+	width: 6.25rem;
 	color: white;
 	background-color: black;
 	border: none;
 	padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+	.comment__main {
+		width: 100%;
+	}
 }
