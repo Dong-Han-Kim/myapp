@@ -6,6 +6,7 @@ import { MenuBar } from '../_asset/icons';
 import Link from 'next/link';
 import { useSelectedLayoutSegment } from 'next/navigation';
 import { useRef, useState } from 'react';
+import clsx from 'clsx';
 
 export default function Nav() {
 	const [menu, setMenu] = useState(false);
@@ -34,51 +35,50 @@ export default function Nav() {
 				</Link>
 			</div>
 			<ul className={styles.items} ref={toggleRef} onClick={listHandler}>
-				{segment === null ? (
-					<Link href="/">
-						<li style={{ backgroundColor: 'rgba(0, 0, 0)', color: 'white' }}>Home</li>
-					</Link>
-				) : (
-					<Link href="/">
-						<li>Home</li>
-					</Link>
-				)}
-				{segment === 'about' ? (
-					<Link href="/about">
-						<li style={{ backgroundColor: 'rgba(0, 0, 0)', color: 'white' }}>About</li>
-					</Link>
-				) : (
-					<Link href="/about">
-						<li>About</li>
-					</Link>
-				)}
-				{segment === 'project' ? (
-					<Link href="/project">
-						<li style={{ backgroundColor: 'rgba(0, 0, 0)', color: 'white' }}>Project</li>
-					</Link>
-				) : (
-					<Link href="/project">
-						<li>Project</li>
-					</Link>
-				)}
-				{segment === 'contact' ? (
-					<Link href="/contact">
-						<li style={{ backgroundColor: 'rgba(0, 0, 0)', color: 'white' }}>Contact</li>
-					</Link>
-				) : (
-					<Link href="/contact">
-						<li>Contact</li>
-					</Link>
-				)}
-				{segment === 'comment' ? (
-					<Link href="/comment">
-						<li style={{ backgroundColor: 'rgba(0, 0, 0)', color: 'white' }}>Comment</li>
-					</Link>
-				) : (
-					<Link href="/comment">
-						<li>Comment</li>
-					</Link>
-				)}
+				<Link href="/">
+					<li
+						className={clsx({
+							[styles.isActive]: segment === null,
+						})}>
+						Home
+					</li>
+				</Link>
+
+				<Link href="/about">
+					<li
+						className={clsx({
+							[styles.isActive]: segment === 'about',
+						})}>
+						About
+					</li>
+				</Link>
+
+				<Link href="/project">
+					<li
+						className={clsx({
+							[styles.isActive]: segment === 'project',
+						})}>
+						Project
+					</li>
+				</Link>
+
+				<Link href="/contact">
+					<li
+						className={clsx({
+							[styles.isActive]: segment === 'contact',
+						})}>
+						Contact
+					</li>
+				</Link>
+
+				<Link href="/comment">
+					<li
+						className={clsx({
+							[styles.isActive]: segment === 'comment',
+						})}>
+						Comment
+					</li>
+				</Link>
 			</ul>
 
 			<button className={styles.menuBtn} onClick={toggleMenu}>

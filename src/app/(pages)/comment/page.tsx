@@ -1,6 +1,6 @@
 'use client';
 
-import { Dispatch, Fragment, SetStateAction, useCallback, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Edit from './_component/Edit';
 import style from './page.module.css';
 import { DocumentData, collection, doc, getDocs, setDoc } from 'firebase/firestore';
@@ -79,31 +79,37 @@ export default function Comment() {
 			</section>
 			<section className={style.comment__middle}>
 				{!isEdit ? (
-					<ul className={style.comment__list}>
-						{commentsList
-							.sort((a, b) => b.time - a.time)
-							.map((item) => {
-								return (
-									<Link key={item.commentId} href={`/comment/${item.commentId}`}>
-										<li className={style.list__item}>
-											<span className={style.title}>{item.title}</span>
-											<div className={style.item__info}>
-												<span className={style.name}>{item.name}</span>
-												<span className={style.today}>{item.today}</span>
-											</div>
-										</li>
-									</Link>
-								);
-							})
-							.slice(amount, amount + limit.current)}
-					</ul>
+					<>
+						<ul className={style.comment__list}>
+							{commentsList
+								.sort((a, b) => b.time - a.time)
+								.map((item) => {
+									return (
+										<Link key={item.commentId} href={`/comment/${item.commentId}`}>
+											<li className={style.list__item}>
+												<span className={style.title}>{item.title}</span>
+												<div className={style.item__info}>
+													<span className={style.name}>{item.name}</span>
+													<span className={style.today}>{item.today}</span>
+												</div>
+											</li>
+										</Link>
+									);
+								})
+								.slice(amount, amount + limit.current)}
+						</ul>
+						<div>
+							<Pagination
+								total={commentsList.length}
+								limit={limit.current}
+								page={page}
+								setPage={setPage}
+							/>
+						</div>
+					</>
 				) : (
 					<Edit onTitle={setTitle} onName={setName} onPassword={setPassword} onComment={setComment} />
 				)}
-
-				<div>
-					<Pagination total={commentsList.length} limit={limit.current} page={page} setPage={setPage} />
-				</div>
 			</section>
 			<section className={style.comment__bottom}>
 				{!isEdit ? (

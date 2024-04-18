@@ -33,21 +33,21 @@ export default function Home() {
 						className={`${styles.myNameOne} ${clsx({
 							[styles.isActive]: view > 1,
 						})}`}>
-						KIM DONGHAN
+						KIMDONGHAN
 					</p>
 
 					<p
 						className={`${styles.myNameTwo} ${clsx({
 							[styles.isActive]: view > 0,
 						})}`}>
-						KIM DONGHAN
+						KIMDONGHAN
 					</p>
 
 					<p
 						className={`${styles.myNameThree} ${clsx({
 							[styles.isActive]: view >= 0,
 						})}`}>
-						KIM DONGHAN
+						KIMDONGHAN
 					</p>
 				</div>
 			</div>

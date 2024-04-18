@@ -2,13 +2,16 @@
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
+	width: 100dvw;
 	height: 100dvh;
+	background-color: aqua;
 }
 
 .topSection {
-	width: 100dvw;
+	width: 100%;
 	position: fixed;
 	z-index: 5;
+	background-color: bisque;
 }
 
 .bottomSection {
@@ -16,12 +19,14 @@
 	text-align: center;
 	justify-content: space-between;
 	position: absolute;
-	inset: 7.5rem 12.5rem 1rem 4.5rem;
+	inset: 7.5rem 5rem 2rem 5rem;
+	background-color: burlywood;
 }
 
 .leftLayout {
 	text-align: center;
-	width: 12.5rem;
+	width: 10.5vw;
+	background-color: cadetblue;
 }
 
 .rightContent {
@@ -29,43 +34,16 @@
 	justify-content: center;
 	align-items: center;
 	position: relative;
-	width: 82rem;
+	width: 68vw;
 	margin: 0 auto;
 }
 
 @media screen and (max-width: 800px) {
-	.main {
-		display: flex;
-	}
-
-	.topSection {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100dvw;
-		padding: 15px;
-		z-index: 1;
-	}
-
 	.bottomSection {
-		/* height: 100%;
-		margin-top: 7rem; */
-		inset: 100px 0px 0 0;
+		inset: 10px 0 10px 0;
 	}
 
 	.leftLayout {
-		position: relative;
-		top: 0;
-		left: 0;
-	}
-
-	.rightContent {
-		display: flex;
-
-		margin: 0 auto;
+		display: none;
 	}
 }
