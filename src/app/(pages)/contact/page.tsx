@@ -6,6 +6,7 @@ export default function Contact() {
 	return (
 		<div>
 			<div className={styles.container}>
+				<h1 className={styles.contact__title}>E-mail & Github</h1>
 				<div className={styles.contact}>
 					<div className={styles.icon}>
 						<Mail />

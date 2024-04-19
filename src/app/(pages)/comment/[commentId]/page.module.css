@@ -127,3 +127,26 @@
 	width: 50rem;
 	height: 19rem;
 }
+
+@media screen and (max-width: 768px) {
+	.title__content,
+	.detail__login,
+	.comment__read,
+	.title__input,
+	.edit__login,
+	.comment__create {
+		width: 100%;
+	}
+
+	.content__box {
+		margin: 0 5px;
+	}
+
+	.detail__login {
+		padding: 0;
+	}
+
+	.comment__modify {
+		margin: 0 10px;
+	}
+}

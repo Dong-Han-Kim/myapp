@@ -17,7 +17,6 @@
 }
 
 .items a {
-	margin-right: 1rem;
 	transition: all 250ms ease-in;
 }
 
@@ -61,21 +60,19 @@
 	.container {
 		flex-direction: row;
 		align-items: center;
-		height: 95px;
+		height: 85px;
 		position: absolute;
-	}
-
-	.logo {
-		margin: 0;
 	}
 
 	.items {
 		flex-direction: column;
+		justify-content: center;
 		position: absolute;
 		text-align: center;
 		background-color: rgb(222, 222, 222);
-		width: 100dvw;
-		top: 5rem;
+		width: 100%;
+		top: 80px;
+		left: -10px;
 		display: none;
 		z-index: 1;
 	}
@@ -83,22 +80,9 @@
 	.toggleMenu {
 		display: flex;
 	}
-	.items a {
-		width: 100vw;
-	}
 
 	.items li {
 		width: 100vw;
 		margin: 0;
-	}
-}
-
-@keyframes Navbar {
-	0% {
-		height: 0;
-	}
-
-	100% {
-		height: 100%;
 	}
 }

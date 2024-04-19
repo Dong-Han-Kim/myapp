@@ -6,6 +6,23 @@
 	background-color: rgba(222, 222, 222, 0.2);
 }
 
+.contact__title {
+	font-size: 4rem;
+	font-weight: 700;
+}
+
+.contact__title::after {
+	content: '';
+	display: block;
+	position: relative;
+	left: 50%;
+	margin-left: -57px;
+	margin-top: 8px;
+	width: 100px;
+	height: 2px;
+	background-color: black;
+}
+
 .contact {
 	display: flex;
 	justify-content: flex-start;

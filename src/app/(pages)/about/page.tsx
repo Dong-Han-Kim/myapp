@@ -41,6 +41,7 @@ export default function About() {
 
 						<div className={styles.skillBox}>
 							<h5 className={styles.subTitle}>etc</h5>
+
 							<GitHub />
 						</div>
 					</div>

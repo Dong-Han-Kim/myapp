@@ -4,14 +4,12 @@
 	flex-direction: column;
 	width: 100dvw;
 	height: 100dvh;
-	background-color: aqua;
 }
 
 .topSection {
 	width: 100%;
 	position: fixed;
-	z-index: 5;
-	background-color: bisque;
+	z-index: 1;
 }
 
 .bottomSection {
@@ -20,13 +18,11 @@
 	justify-content: space-between;
 	position: absolute;
 	inset: 7.5rem 5rem 2rem 5rem;
-	background-color: burlywood;
 }
 
 .leftLayout {
 	text-align: center;
 	width: 10.5vw;
-	background-color: cadetblue;
 }
 
 .rightContent {
@@ -39,11 +35,19 @@
 }
 
 @media screen and (max-width: 800px) {
+	.main {
+		min-height: 100dvw;
+	}
 	.bottomSection {
-		inset: 10px 0 10px 0;
+		inset: 10px 0 0 0;
 	}
 
 	.leftLayout {
 		display: none;
+	}
+
+	.rightContent {
+		width: 100%;
+		margin: 0 auto;
 	}
 }

@@ -51,9 +51,13 @@
 .name {
 	font-weight: 700;
 	margin-right: 20px;
+	width: 8vw;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .today {
+	width: 6vw;
 	color: darkgrey;
 	font-size: 13px;
 }
@@ -88,7 +92,15 @@
 }
 
 @media screen and (max-width: 768px) {
-	.comment__main {
+	.comment__middle {
 		width: 100%;
+	}
+
+	.name {
+		width: 11vw;
+	}
+
+	.today {
+		width: 19vw;
 	}
 }

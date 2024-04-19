@@ -2,15 +2,13 @@
 	width: 100%;
 	align-items: center;
 	display: flex;
-	background-color: cadetblue;
 }
 
 .container {
 	display: flex;
 	justify-content: center;
 	position: relative;
-	width: 100dvw;
-	background-color: chartreuse;
+	width: 100%;
 }
 
 .myNames {
@@ -19,7 +17,6 @@
 	flex-direction: column;
 	font-weight: bolder;
 	width: 100%;
-	background-color: cornflowerblue;
 }
 
 .myNameOne {
@@ -51,6 +48,8 @@
 		width: 100%;
 		writing-mode: vertical-lr;
 		text-orientation: upright;
+		justify-content: space-between;
+		margin: 0 35px;
 	}
 
 	.myNameOne {
