@@ -17,6 +17,7 @@
 	flex-direction: column;
 	font-weight: bolder;
 	width: 100%;
+	align-items: self-start;
 }
 
 .myNameOne {
@@ -46,14 +47,13 @@
 @media screen and (max-width: 768px) {
 	.myNames {
 		width: 100%;
-		writing-mode: vertical-lr;
-		text-orientation: upright;
 		justify-content: space-between;
 		margin: 0 35px;
+		top: -20px;
 	}
 
 	.myNameOne {
-		font-size: 3rem;
+		font-size: 2rem;
 		position: relative;
 	}
 
@@ -63,6 +63,6 @@
 	}
 
 	.myNameThree {
-		font-size: 1.5rem;
+		font-size: 2rem;
 	}
 }

@@ -3,7 +3,7 @@
 	justify-content: space-between;
 	flex-direction: column;
 	width: 100dvw;
-	height: 100dvh;
+	height: 100%;
 }
 
 .topSection {
@@ -35,11 +35,9 @@
 }
 
 @media screen and (max-width: 800px) {
-	.main {
-		min-height: 100dvh;
-	}
 	.bottomSection {
 		inset: 10px 0 0 0;
+		top: 120px;
 	}
 
 	.leftLayout {
