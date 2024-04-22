@@ -17,7 +17,7 @@
 	flex-direction: column;
 	font-weight: bolder;
 	width: 100%;
-	align-items: self-start;
+	align-items: flex-start;
 }
 
 .myNameOne {
@@ -48,7 +48,8 @@
 	.myNames {
 		width: 100%;
 		justify-content: space-between;
-		margin: 0 35px;
+		margin: 0 auto;
+		align-items: center;
 		top: -20px;
 	}
 
