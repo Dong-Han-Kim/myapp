@@ -1,5 +1,14 @@
 export const works = [
 	{
+		id: 'calculator',
+		name: 'calculator',
+		imgsrc: '/calculator.png',
+		skill: 'HTML, CSS, Javascript',
+		description: '사칙연산 및 소수와 음수 계산이 가능한 계산기입니다.',
+		site: 'https://dong-han-kim.github.io/calculator/',
+		github: 'https://github.com/Dong-Han-Kim/calculator',
+	},
+	{
 		id: 'todo',
 		name: 'To Do List',
 		imgsrc: '/todo.png',
