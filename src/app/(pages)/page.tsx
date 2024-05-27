@@ -26,31 +26,29 @@ export default function Home() {
 	console.log(`name: ${view}`);
 
 	return (
-		<main className={styles.main}>
-			<div className={styles.container}>
-				<div className={styles.myNames}>
-					<p
-						className={`${styles.myNameOne} ${clsx({
-							[styles.isActive]: view > 1,
-						})}`}>
-						KIMDONGHAN
-					</p>
+		<div className={styles.container}>
+			<div className={styles.myNames}>
+				<p
+					className={`${styles.myNameOne} ${clsx({
+						[styles.isActive]: view > 1,
+					})}`}>
+					KIMDONGHAN
+				</p>
 
-					<p
-						className={`${styles.myNameTwo} ${clsx({
-							[styles.isActive]: view > 0,
-						})}`}>
-						KIMDONGHAN
-					</p>
+				<p
+					className={`${styles.myNameTwo} ${clsx({
+						[styles.isActive]: view > 0,
+					})}`}>
+					KIMDONGHAN
+				</p>
 
-					<p
-						className={`${styles.myNameThree} ${clsx({
-							[styles.isActive]: view >= 0,
-						})}`}>
-						KIMDONGHAN
-					</p>
-				</div>
+				<p
+					className={`${styles.myNameThree} ${clsx({
+						[styles.isActive]: view >= 0,
+					})}`}>
+					KIMDONGHAN
+				</p>
 			</div>
-		</main>
+		</div>
 	);
 }

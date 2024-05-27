@@ -7,8 +7,10 @@
 }
 
 .topSection {
+	display: flex;
+	position: absolute;
 	width: 100%;
-	position: fixed;
+	margin-bottom: 50px;
 	z-index: 1;
 }
 
@@ -23,6 +25,7 @@
 .leftLayout {
 	text-align: center;
 	width: 10.5vw;
+	position: fixed;
 }
 
 .rightContent {
@@ -35,6 +38,10 @@
 }
 
 @media screen and (max-width: 800px) {
+	.topSection {
+		z-index: 1;
+	}
+
 	.bottomSection {
 		inset: 10px 0 0 0;
 		top: 120px;

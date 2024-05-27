@@ -1,27 +1,19 @@
-.main {
-	display: flex;
-	flex-direction: column;
-	position: relative;
-	padding: 10px;
-}
-
 .container {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	position: relative;
+	padding: 20vh 10px 10px 10px;
 }
 
 .about {
 	width: inherit;
-	height: 6rem;
 	margin-bottom: 15px;
 }
 
 .education {
 	width: 100%;
-	height: 7rem;
 	margin-bottom: 15px;
 }
 
@@ -49,7 +41,7 @@
 }
 
 .skill {
-	width: 100%;
+	width: 60%;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
@@ -58,6 +50,7 @@
 .categories {
 	font-size: 1.5rem;
 	margin: 15px 0;
+	animation: titles 3s;
 }
 
 .skillIcons {
@@ -65,6 +58,7 @@
 	width: 100%;
 	height: 100%;
 	justify-content: space-around;
+	flex-direction: column;
 }
 
 .subTitle {
@@ -83,20 +77,26 @@
 	background-color: black;
 }
 
+.icons {
+	display: flex;
+	justify-content: space-between;
+}
+
+.icons img {
+	margin: 7px;
+}
 .skillBox {
 	display: flex;
 	flex-direction: column;
 	height: 100%;
 	align-items: center;
-	margin-top: 8px;
 	padding: 20px;
 	border-radius: 2%;
-	background-color: rgba(0, 0, 0, 0.4);
 }
 
 .skillBox img,
 .skillBox svg {
-	margin-top: 25px;
+	margin-top: 10px;
 }
 
 @media screen and (max-width: 768px) {
@@ -125,5 +125,14 @@
 	.skillBox {
 		padding: 10px;
 		margin: 0 8px;
+	}
+}
+
+@keyframes titles {
+	0% {
+		transform: translateY(-100%);
+	}
+	100% {
+		transform: translateY(0%);
 	}
 }

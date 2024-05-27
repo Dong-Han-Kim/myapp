@@ -72,7 +72,7 @@ export default function Comment() {
 	}, [isEdit]);
 
 	return (
-		<main className={style.comment__main}>
+		<div className={style.comment__main}>
 			<section className={style.comment__top}>
 				<h1 className={style.comment__title}>Comments</h1>
 				<p>수정이 필요한 부분이나 부족한 부분이 있다면 짧은 글이라도 남겨주세요. 저에게 많은 도움이 됩니다.</p>
@@ -132,6 +132,6 @@ export default function Comment() {
 					</div>
 				)}
 			</section>
-		</main>
+		</div>
 	);
 }

@@ -19,11 +19,10 @@ export default function contantLayout({ children, modal }: Props) {
 			<section className={styles.topSection}>
 				<Nav />
 			</section>
-
 			<section className={styles.bottomSection}>
-				<div className={styles.leftLayout}>
+				<aside className={styles.leftLayout}>
 					<Title />
-				</div>
+				</aside>
 				<div className={styles.rightContent}>
 					{children}
 					{modal}

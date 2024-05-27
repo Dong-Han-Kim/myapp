@@ -1,30 +1,7 @@
-.titleBox {
-	width: 100%;
-}
-
-.topTitle {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	display: flex;
-}
-
-.topTitle::after {
-	content: '';
-	display: inline-block;
-	position: absolute;
-	margin: 1.25rem 0 0 10rem;
-	width: 89%;
-	height: 2px;
-	background-color: black;
-}
-
 .container {
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
-	top: -4rem;
 }
 
 .project {
