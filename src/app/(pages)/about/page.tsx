@@ -49,6 +49,7 @@ export default function About() {
 							<Image src={'/React.svg.png'} width={50} height={50} alt="React" />
 							<Image src={'/next.svg'} width={50} height={50} alt="Next.js" />
 							<Image src={'/tailwindcss.svg'} width={50} height={50} alt="Tailwind-css" />
+							<Image src={'/reactquery.svg'} width={50} height={50} alt="React Query" />
 						</div>
 					</div>
 
