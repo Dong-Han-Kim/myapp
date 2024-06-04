@@ -22,7 +22,7 @@ export default function Detail() {
 			<div className={styles.container} onClick={backRoute}>
 				{works.map((work) => {
 					return work.id === params.id ? (
-						<div key={work.id} className={styles.item} id={work.id}>
+						<div key={work.id} className={styles.item} id={work.id} onClick={(e) => e.stopPropagation()}>
 							<WorkModal
 								id={work.id}
 								imgsrc={work.imgsrc}

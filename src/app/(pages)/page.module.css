@@ -4,7 +4,8 @@
 	align-items: center;
 	position: relative;
 	width: 100%;
-	padding-left: 30px;
+	height: fit-content;
+	background-color: aqua;
 }
 
 .myNames {
@@ -14,6 +15,7 @@
 	font-weight: bolder;
 	width: 100%;
 	align-items: flex-start;
+	/* background-color: bisque; */
 }
 
 .myNameOne {
@@ -41,12 +43,16 @@
 }
 
 @media screen and (max-width: 768px) {
+	.container {
+		justify-content: center;
+		align-items: center;
+	}
+
 	.myNames {
 		width: 100%;
 		justify-content: space-between;
 		margin: 0 auto;
 		align-items: center;
-		top: -20px;
 	}
 
 	.myNameOne {
