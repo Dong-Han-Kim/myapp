@@ -23,7 +23,7 @@ export const works = [
 		imgsrc: '/netflix.png',
 		skill: 'React, Next.js, Tailwind css, Vercel, React Query, swiper, Typescript',
 		description: 'Next.js와 React Query를 이용하고 만든 영화 & 시리즈 소개 사이트입니다.',
-		site: 'https://netflix-six-nu.vercel.app/',
+		site: 'https://dhflix.netlify.app/',
 		github: 'https://github.com/Dong-Han-Kim/Netflix.git',
 	},
 	{
@@ -41,7 +41,7 @@ export const works = [
 		imgsrc: '/portfolio.png',
 		skill: 'React, Next.js, CSS module, Vercel',
 		description: '저를 소개하기 위해 만든 현재 저의 포트폴리오입니다.',
-		site: 'https://dhportfolio.vercel.app/',
+		site: 'https://dong-han.netlify.app/',
 		github: 'https://github.com/Dong-Han-Kim/myapp.git',
 	},
 ];

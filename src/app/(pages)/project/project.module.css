@@ -37,5 +37,7 @@
 	.container {
 		flex-direction: column;
 		width: inherit;
+		justify-content: center;
+		align-items: center;
 	}
 }
