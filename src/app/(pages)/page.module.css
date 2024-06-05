@@ -5,7 +5,6 @@
 	position: relative;
 	width: 100%;
 	height: fit-content;
-	background-color: aqua;
 }
 
 .myNames {
@@ -15,7 +14,6 @@
 	font-weight: bolder;
 	width: 100%;
 	align-items: flex-start;
-	/* background-color: bisque; */
 }
 
 .myNameOne {
