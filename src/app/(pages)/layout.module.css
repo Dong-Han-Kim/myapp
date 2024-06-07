@@ -15,7 +15,7 @@
 .bottomSection {
 	display: flex;
 	text-align: center;
-	margin: 12dvh auto;
+	margin: 15vh auto;
 	justify-content: space-between;
 	height: 100%;
 }
@@ -32,13 +32,10 @@
 	position: relative;
 	margin: 0 auto;
 	width: 64rem;
+	padding-top: 8vh;
 }
 
 @media screen and (max-width: 768px) {
-	.main {
-		width: 100vw;
-		height: 100dvh;
-	}
 	.topSection {
 		position: fixed;
 		z-index: 1;
