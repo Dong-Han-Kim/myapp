@@ -82,8 +82,8 @@ export default function CommentDetail() {
 						</div>
 
 						<div className={style.detail__login}>
-							<h3 className={style.login__name}>작성자 : {commentItem.name}</h3>
-							<h3 className={style.login__today}>작성 날짜 : {commentItem.today}</h3>
+							<span className={style.login__name}>작성자 : {commentItem.name}</span>
+							<span className={style.login__today}>날짜 : {commentItem.today}</span>
 						</div>
 
 						<div className={style.comment__area}>
@@ -106,14 +106,14 @@ export default function CommentDetail() {
 							<input
 								type="text"
 								placeholder="이름을 입력해주세요."
-								className={`${style.login__name} ${style.input}`}
+								className={`${style.edit__name} ${style.input}`}
 								value={name}
 								onChange={(e) => setName(e.target.value)}
 							/>
 							<input
 								type="password"
 								placeholder="비밀번호를 입력해주세요."
-								className={`${style.login__password} ${style.input}`}
+								className={`${style.edit__password} ${style.input}`}
 								value={password}
 								onChange={(e) => setPassword(e.target.value)}
 							/>
