@@ -1,6 +1,7 @@
 .changeTitle {
 	display: flex;
 	margin: 3rem;
+	position: fixed;
 }
 
 .titleBox {

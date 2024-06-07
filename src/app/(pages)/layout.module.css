@@ -10,7 +10,6 @@
 	position: absolute;
 	width: 100%;
 	margin-bottom: 50px;
-	z-index: 1;
 }
 
 .bottomSection {
@@ -36,20 +35,16 @@
 }
 
 @media screen and (max-width: 768px) {
-	/* .topSection {
-		z-index: 1;
-	} */
-
-	/* .bottomSection {
-		inset: 10px 0 0 0;
-		top: 135px;
-	} */
-
+	.main {
+		width: 100%;
+		height: 100%;
+	}
 	.leftLayout {
 		display: none;
 	}
 
 	.rightContent {
 		width: 100%;
+		height: 100%;
 	}
 }
