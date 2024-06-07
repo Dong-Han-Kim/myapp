@@ -17,7 +17,7 @@
 .bottomSection {
 	display: flex;
 	text-align: center;
-	justify-content: space-between;
+	justify-content: space-around;
 	position: absolute;
 	inset: 7.5rem 5rem 2rem 5rem;
 }
@@ -42,7 +42,7 @@
 
 	.bottomSection {
 		inset: 10px 0 0 0;
-		top: 120px;
+		top: 135px;
 	}
 
 	.leftLayout {
