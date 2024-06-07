@@ -8,7 +8,6 @@ export default function Title() {
 	console.log(pathname);
 
 	return (
-		// <div className={style.main}>
 		<div className={style.changeTitle}>
 			{pathname === '/' ? (
 				<div className={style.titleBox}>
@@ -40,6 +39,5 @@ export default function Title() {
 				</div>
 			) : null}
 		</div>
-		// </div>
 	);
 }
