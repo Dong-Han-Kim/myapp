@@ -16,7 +16,11 @@
 }
 
 .imgBox {
+	position: relative;
+	width: 21rem;
+	height: 17rem;
 	margin-bottom: 30px;
+	margin: 0 auto;
 }
 
 .textBox {

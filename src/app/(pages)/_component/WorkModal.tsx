@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import styles from './workModal.module.css';
+import styles from './WorkModal.module.css';
 import Link from 'next/link';
 
 type Props = {
@@ -17,7 +17,7 @@ export function WorkModal({ id, name, imgsrc, skill, description, site, github }
 		<div className={styles.container}>
 			<div className={styles.item} key={id}>
 				<div className={styles.imgBox}>
-					<Image src={imgsrc} width={350} height={280} alt="work-image" sizes="(max-width: 768px) 12vw" />
+					<Image src={imgsrc} fill alt="work-image" />
 				</div>
 				<div className={styles.textBox}>
 					<h3 className={styles.text}>
