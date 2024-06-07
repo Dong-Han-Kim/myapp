@@ -17,7 +17,7 @@ export function WorkModal({ id, name, imgsrc, skill, description, site, github }
 		<div className={styles.container}>
 			<div className={styles.item} key={id}>
 				<div className={styles.imgBox}>
-					<Image src={imgsrc} width={350} height={280} alt="work-image" />
+					<Image src={imgsrc} width={350} height={280} alt="work-image" sizes="(max-width: 768px) 12vw" />
 				</div>
 				<div className={styles.textBox}>
 					<h3 className={styles.text}>
