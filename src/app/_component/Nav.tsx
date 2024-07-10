@@ -31,7 +31,9 @@ export default function Nav() {
 		<nav className={styles.container}>
 			<div className={styles.logo}>
 				<Link href="/">
-					<Image src={'/logo.png'} width={90} height={90} alt="Logo" />
+					<div className={styles.logo}>
+						<Image src={'/logo.png'} fill alt="Logo" />
+					</div>
 				</Link>
 			</div>
 			<ul className={styles.items} ref={toggleRef} onClick={listHandler}>

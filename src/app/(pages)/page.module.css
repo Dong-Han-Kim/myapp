@@ -42,27 +42,10 @@
 	.container {
 		justify-content: center;
 		align-items: center;
-		padding-top: 85px;
+		padding-top: 50px;
 	}
 
 	.myNames {
-		width: 100%;
-		justify-content: space-between;
-		margin: 0 auto;
-		align-items: center;
-	}
-
-	.myNameOne {
-		font-size: 2rem;
-		position: relative;
-	}
-
-	.myNameTwo {
-		font-size: 2rem;
-		position: relative;
-	}
-
-	.myNameThree {
 		font-size: 2rem;
 	}
 }

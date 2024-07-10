@@ -6,7 +6,9 @@ import { works } from '@/app/(pages)/_asset/works';
 export default function Project() {
 	return (
 		<div className={styles.container}>
-			<h3>Project</h3>
+			<div className={styles.main_title}>
+				<h3>Project</h3>
+			</div>
 			<div className={styles.works}>
 				{works.map((work) => {
 					return (

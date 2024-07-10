@@ -62,7 +62,7 @@
 @media screen and (max-width: 768px) {
 	.container {
 		flex-direction: column;
-		padding-top: 100px;
+		padding-top: 50px;
 	}
 
 	.container p {
