@@ -1,8 +1,9 @@
 .comment__main {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	width: 100%;
+	margin: 0 auto;
+	/* justify-content: center;
+	width: 100%; */
 }
 
 /* top */
@@ -13,11 +14,13 @@
 
 .comment__title {
 	display: inline-block;
+	font-size: 1.5rem;
+	margin-bottom: 10px;
 }
 
 /* middle */
 .comment__middle {
-	margin: 25px auto;
+	margin: 0 auto;
 	width: 50rem;
 	padding: 15px;
 }
@@ -62,9 +65,13 @@
 	font-size: 13px;
 }
 
+.comment_nav {
+	display: flex;
+	justify-content: center;
+}
+
 /* bottom */
 .comment__bottom {
-	margin-top: 25px;
 	display: flex;
 	justify-content: flex-end;
 }
@@ -92,15 +99,36 @@
 }
 
 @media screen and (max-width: 768px) {
+	.comment__main {
+		padding-top: 100px;
+	}
+
+	.comment__title {
+		font-size: 1rem;
+	}
+
+	.comment__top p {
+		font-size: 0.8rem;
+	}
+
 	.comment__middle {
 		width: 100%;
 	}
 
+	.title {
+		font-size: 0.8rem;
+	}
+
 	.name {
 		width: 11vw;
+		font-size: 0.8rem;
 	}
 
 	.today {
 		width: 19vw;
+	}
+
+	.edit__btn {
+		font-size: 0.7rem;
 	}
 }

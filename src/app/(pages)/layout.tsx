@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Nav from '../_component/Nav';
 import styles from './layout.module.css';
-import Title from '../_component/Title';
+import Footer from '../_component/Footer';
 
 export const metadata: Metadata = {
 	title: 'DH',
@@ -15,19 +15,19 @@ type Props = {
 
 export default function contantLayout({ children, modal }: Props) {
 	return (
-		<main className={styles.main}>
-			<section className={styles.topSection}>
+		<>
+			<header>
 				<Nav />
-			</section>
-			<section className={styles.bottomSection}>
-				<aside className={styles.leftLayout}>
-					<Title />
-				</aside>
-				<div className={styles.rightContent}>
+			</header>
+			<main className={styles.main}>
+				<section className={styles.content}>
 					{children}
 					{modal}
-				</div>
-			</section>
-		</main>
+				</section>
+			</main>
+			<footer>
+				<Footer />
+			</footer>
+		</>
 	);
 }

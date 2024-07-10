@@ -73,7 +73,7 @@ export default function CommentDetail() {
 	}, [commentId, isModify]);
 
 	return (
-		<main>
+		<main className={style.main}>
 			<section>
 				{!isModify ? (
 					<div key={commentItem.commentId} className={style.content__box}>

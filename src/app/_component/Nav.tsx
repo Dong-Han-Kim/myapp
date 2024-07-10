@@ -62,15 +62,6 @@ export default function Nav() {
 					</li>
 				</Link>
 
-				<Link href="/contact">
-					<li
-						className={clsx({
-							[styles.isActive]: segment === 'contact',
-						})}>
-						Contact
-					</li>
-				</Link>
-
 				<Link href="/comment">
 					<li
 						className={clsx({

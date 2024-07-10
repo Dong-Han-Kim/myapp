@@ -1,132 +1,94 @@
 .container {
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	position: relative;
-	padding: 10px;
+	margin: 0 auto;
 }
 
 .about {
-	width: inherit;
-	margin-bottom: 15px;
+	padding: 10px;
 }
 
-.education {
-	width: 100%;
-	margin-bottom: 15px;
-}
-
-.education ul {
-	list-style: none;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
+.about_me {
 	margin-bottom: 15px;
 }
 
 .education ul li {
-	margin-bottom: 10px;
 	display: flex;
 	justify-content: space-between;
 }
 
-.education ul li p {
-	font-size: 1rem;
-}
-
 .date {
+	color: rgb(182, 182, 182);
 	font-size: 0.8rem;
-	color: rgb(144, 143, 141);
 }
 
 .skill {
-	width: 60%;
-	height: 100%;
-	display: flex;
-	flex-direction: column;
+	padding: 10px;
+	background-color: rgba(255, 255, 255, 0.5);
 }
 
 .categories {
 	font-size: 1.5rem;
-	margin: 15px 0;
+	margin: 7px 0;
 	animation: titles 3s;
-}
-
-.skillIcons {
-	display: flex;
-	width: 100%;
-	height: 100%;
-	justify-content: space-around;
-	flex-direction: column;
-}
-
-.subTitle {
-	font-size: 1.2rem;
 }
 
 .subTitle::after {
 	content: '';
 	display: block;
 	position: relative;
-	left: 50%;
-	margin-left: -12px;
-	margin-top: 8px;
-	width: 25px;
+	width: 100%;
 	height: 2px;
 	background-color: black;
 }
 
 .icons {
 	display: flex;
-	justify-content: space-between;
+	margin-top: 10px;
+}
+
+.icon {
+	width: 50px;
+	height: 50px;
+	position: relative;
 }
 
 .icons img {
-	margin: 7px;
+	margin: 5px;
 }
 .skillBox {
-	display: flex;
-	flex-direction: column;
-	height: 100%;
-	align-items: center;
-	padding: 20px;
-	border-radius: 2%;
-}
-
-.skillBox img,
-.skillBox svg {
-	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 @media screen and (max-width: 768px) {
 	.container {
-		justify-content: space-between;
-		padding-top: 12vh;
+		flex-direction: column;
+		padding-top: 100px;
 	}
 
-	.education {
-		margin-top: 25px;
+	.container p {
+		font-size: 0.8rem;
 	}
 
-	.skill {
-		margin-top: 30px;
+	.categories {
+		font-size: 1rem;
+		margin: 7px 0;
+		animation: titles 3s;
 	}
 
-	.skillIcons {
+	.icons {
 		display: flex;
-		justify-content: space-between;
 	}
 
-	.skillBox {
-		padding: 10px;
-		margin: 0 8px;
+	.icon {
+		width: 30px;
+		height: 30px;
+		position: relative;
 	}
 }
 
 @keyframes titles {
 	0% {
-		transform: translateY(-100%);
+		transform: translateY(-70%);
 	}
 	100% {
 		transform: translateY(0%);

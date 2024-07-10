@@ -98,7 +98,7 @@ export default function Comment() {
 								})
 								.slice(amount, amount + limit.current)}
 						</ul>
-						<div>
+						<div className={style.comment_nav}>
 							<Pagination
 								total={commentsList.length}
 								limit={limit.current}

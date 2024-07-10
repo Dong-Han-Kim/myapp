@@ -12,7 +12,7 @@ interface Pagination {
 export default function Pagination({ total, limit, page, setPage }: Pagination) {
 	const pages = Math.ceil(total / limit);
 	return (
-		<nav>
+		<div>
 			{Array(pages)
 				.fill(1)
 				.map((ele, i) => {
@@ -28,6 +28,6 @@ export default function Pagination({ total, limit, page, setPage }: Pagination) 
 						</button>
 					);
 				})}
-		</nav>
+		</div>
 	);
 }

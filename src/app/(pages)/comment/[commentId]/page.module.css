@@ -1,3 +1,9 @@
+.main {
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+}
+
 .content__box {
 	display: flex;
 	justify-content: center;
@@ -46,8 +52,8 @@
 }
 
 .comment__read {
-	width: 50rem;
-	height: 19rem;
+	width: 50vw;
+	height: 40vh;
 }
 
 .comment__bottom {
@@ -128,6 +134,10 @@
 }
 
 @media screen and (max-width: 768px) {
+	.main {
+		padding-top: 100px;
+	}
+
 	.title__content,
 	.detail__login,
 	.comment__read,
