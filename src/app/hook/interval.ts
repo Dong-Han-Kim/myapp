@@ -5,7 +5,7 @@ interface InterverType {
 }
 
 export const useInterval: InterverType = (callback, delay) => {
-	const savedCallback = useRef<(() => void) | null>(); // 클로저 역할, 렌더해도 초기화 X
+	const savedCallback = useRef<(() => void) | null>(undefined); // 클로저 역할, 렌더해도 초기화 X
 
 	// callback이 변경될 때 감지해서 최신상태 저장
 	useEffect(() => {
