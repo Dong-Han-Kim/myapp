@@ -27,9 +27,7 @@ export default function AdminPage() {
 		e.preventDefault();
 		try {
 			await login(adminId, adminPw);
-			console.log("성공");
-			
-			// router.push('/admin/dashboard');
+			router.push('/admin/dashboard');
 		} catch (error) {
 			console.log("로그인 실패:", error);
 			
