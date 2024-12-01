@@ -16,12 +16,16 @@ export default function About() {
 					<h3 className={styles.categories}>EDUCATION</h3>
 					<ul>
 						<li>
-							<p>중원대학교 경찰행정학과</p>
-							<p className={styles.date}>2011.02 ~ 2018.02</p>
+							<div>레드콩</div>
+							<div className={styles.date}>2024.08 ~</div>
 						</li>
 						<li>
-							<p>충청 ICT취·창업 역량강화 프로그램</p>
-							<p className={styles.date}>2023.10 ~ 2023.11</p>
+							<div>충청 ICT취·창업 역량강화 프로그램</div>
+							<div className={styles.date}>2023.10 ~ 2023.11</div>
+						</li>
+						<li>
+							<div>중원대학교 경찰행정학과</div>
+							<div className={styles.date}>2011.02 ~ 2018.02</div>
 						</li>
 					</ul>
 				</div>

@@ -1,0 +1,40 @@
+#admin_page {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#admin_page fieldset {
+	width: 20%;
+	height: 35%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem;
+}
+
+#admin_page fieldset div {
+	width: 60%;
+	height: 15%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#admin_page fieldset button {
+	width: 60%;
+	height: 18%;
+	border: 1px solid #000;
+	background-color: transparent;
+	margin-top: 1rem;
+}
+
+@media (hover: hover) {
+#admin_page fieldset button:hover {
+		background-color: #000;
+		color: #fff;
+	}
+}
