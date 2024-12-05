@@ -22,12 +22,12 @@ export default function Footer() {
 						<p>github.com/Dong-Han-Kim</p>
 					</Link>
 				</li>
-				<li className={styles.my_address}>
+				{/* <li className={styles.my_address}>
 					<div className={styles.icon}>
 						<Link href={'/admin/login'}>관리자모드</Link>
 					</div>
 						
-				</li>
+				</li> */}
 			</ul>
 		</div>
 	);

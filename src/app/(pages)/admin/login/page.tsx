@@ -1,7 +1,7 @@
 'use client';
 
 import "./style/login.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import {useAdminAuth} from "@/app/store/useAuth";
 
@@ -19,9 +19,14 @@ export default function AdminPage() {
 	const [adminId, setAdminId] = useState('');
 	const [adminPw, setAdminPw] = useState('');
 	const [adminData, setAdminData] = useState<admin>(initialAdmin);
-	const {login} = useAdminAuth() as { login: (id: string, pw: string) => Promise<void> };
+	const {login, user} = useAdminAuth() as { login: (id: string, pw: string) => Promise<void>, user: { id: string } | null };
 	const router = useRouter();
 
+	useEffect(() => {
+		if (user) {
+			router.replace('/admin/dashboard');
+		}
+	}, [user, router]);
 
 	const onSubmitAction = async (e: React.FormEvent) => {
 		e.preventDefault();
