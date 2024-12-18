@@ -1,54 +1,27 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
-import styles from './page.module.css';
-import clsx from 'clsx';
+import Intro from "../_component/intro";
+import About from "../_component/about";
+import Project from "../_component/project";
 
 export default function Home() {
-	const [view, setView] = useState<number>(0);
-
-	useEffect(() => {
-		const viewerTimer = () => {
-			if (view < 3) {
-				setView(view + 1);
-			}
-		};
-
-		const timer = setTimeout(() => {
-			viewerTimer();
-		}, 300);
-
-		return () => {
-			clearTimeout(timer);
-		};
-	}, [view]);
-
-	console.log(`name: ${view}`);
-
-	return (
-		<div className={styles.container}>
-			<div className={styles.myNames}>
-				<p
-					className={`${styles.myNameOne} ${clsx({
-						[styles.isActive]: view > 1,
-					})}`}>
-					KIMDONGHAN
-				</p>
-
-				<p
-					className={`${styles.myNameTwo} ${clsx({
-						[styles.isActive]: view > 0,
-					})}`}>
-					KIMDONGHAN
-				</p>
-
-				<p
-					className={`${styles.myNameThree} ${clsx({
-						[styles.isActive]: view >= 0,
-					})}`}>
-					KIMDONGHAN
-				</p>
-			</div>
-		</div>
-	);
+  return (
+    <div className="flex flex-col justify-start items-center relative w-full h-full pt-24">
+      <section className="flex w-full h-screen items-center justify-center mb-14">
+        <Intro />
+      </section>
+      <section
+        id="about"
+        className="flex w-full items-center justify-center mb-14"
+      >
+        <About />
+      </section>
+      <section
+        id="project"
+        className="flex w-full items-center justify-center mb-14"
+      >
+        <Project />
+      </section>
+    </div>
+  );
 }

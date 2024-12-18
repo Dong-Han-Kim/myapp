@@ -12,7 +12,7 @@ export const useAdminAuth = create((set, get) => ({
             const adminDoc = await getDoc(doc(db, 'user', id));
             console.log(adminDoc.data());
             if (!adminDoc.exists()) {
-                toast.error("정보를 찾을 수 없습니다.", {position: 'top-center', autoClose: 2000});
+                toast.error("정보를 찾을 수 없습니다.", {position: 'top-center', autoClose: 2000, closeButton:true, closeOnClick:true});
                 return;
             }
 
@@ -22,14 +22,14 @@ export const useAdminAuth = create((set, get) => ({
             if (admin.password !== password) {
                 console.log(admin.password);
                 
-                toast.error("비밀번호가 일치하지 않습니다.", {position: 'top-center', autoClose: 2000});
+                toast.error("비밀번호가 일치하지 않습니다.", {position: 'top-center', autoClose: 2000, closeButton:true, closeOnClick:true});
                 return;
             }
 
             set({user: {id}});
-            toast.success("로그인 되었습니다.", {position: 'top-center', autoClose: 2000});
+            toast.success("로그인 되었습니다.", {position: 'top-center', autoClose: 2000, closeButton:true, closeOnClick:true});
         } catch (error) {
-            toast.error("로그인에 실패했습니다.", {position: "top-center", autoClose: 2000});
+            toast.error("로그인에 실패했습니다.", {position: "top-center", autoClose: 2000, closeButton:true, closeOnClick:true});
             console.log("로그인 실패", error);
             
         }
@@ -37,6 +37,6 @@ export const useAdminAuth = create((set, get) => ({
 
     logout: async () => {
             set({user:null});
-            toast.info("로그아웃되었습니다.", {position: "top-center", autoClose: 2000});
+            toast.info("로그아웃되었습니다.", {position: "top-center", autoClose: 2000, closeButton:true, closeOnClick:true});
     }
 }));

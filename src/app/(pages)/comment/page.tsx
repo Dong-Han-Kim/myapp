@@ -27,13 +27,26 @@ export default function Comment() {
 	const [comment, setComment] = useState('');
 	const [commentsList, setCommentsList] = useState<Comment[]>([]);
 	const [page, setPage] = useState(1);
+	const [currentDate, setCurrentDate] = useState('');
+	const [currentTime, setCurrentTime] = useState(0);
+	const [currentId, setCurrentId] = useState('');
 	const limit = useRef(5);
-	const date = new Date();
-	const today = date.toLocaleDateString();
-	const time = Date.now();
-	const commentId = uuidv4();
-
+	
 	const amount = (page - 1) * limit.current;
+	const getComments = async () => {
+		const commentsDB = await getDocs(collection(db, 'comments'));
+		return commentsDB;
+	};
+	
+
+	useEffect(() => {
+		const date = new Date();
+		setCurrentDate(date.toLocaleDateString());
+		setCurrentTime(Date.now());
+		setCurrentId(uuidv4());
+		getComments();
+	},[]);
+
 
 	async function setCommentData() {
 		if (title.length === 0 || name.length === 0 || password.length === 0 || comment.length === 0) {
@@ -41,24 +54,20 @@ export default function Comment() {
 			alert('정보를 입력해 주세요.');
 		} else {
 			setIsEdit(!isEdit);
-			const docRef = doc(db, 'comments', commentId);
+			const docRef = doc(db, 'comments', currentId);
 			await setDoc(docRef, {
 				title,
 				name,
 				password,
 				comment,
-				today,
-				time,
-				commentId,
+				today: currentDate,
+				time: currentTime,
+				commentId: currentId,
 			});
 		}
 	}
 
-	const getComments = async () => {
-		const commentsDB = await getDocs(collection(db, 'comments'));
-		return commentsDB;
-	};
-	getComments();
+
 
 	useEffect(() => {
 		async function getCommentsData() {

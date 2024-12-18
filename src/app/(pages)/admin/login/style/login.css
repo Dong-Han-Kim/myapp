@@ -7,17 +7,17 @@
 }
 
 #admin_page fieldset {
-	width: 20%;
+	width: 300px;
 	height: 35%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding: 1rem;
+	padding: 2.5rem 2.5rem 2rem 2.5rem;
 }
 
 #admin_page fieldset div {
-	width: 60%;
+	width: 100%;
 	height: 15%;
 	display: flex;
 	justify-content: space-between;
@@ -25,11 +25,11 @@
 }
 
 #admin_page fieldset button {
-	width: 60%;
-	height: 18%;
+	width: 100%;
+	height: 30px;
 	border: 1px solid #000;
 	background-color: transparent;
-	margin-top: 1rem;
+	margin-top: 25px;
 }
 
 @media (hover: hover) {
